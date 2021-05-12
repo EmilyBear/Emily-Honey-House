@@ -2,35 +2,35 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site ÍøÕ¾
-## title	ÍøÕ¾±êÌâ
-## subtitle	ÍøÕ¾¸±±êÌâ
-## description	ÍøÕ¾ÃèÊö£¬Ö÷ÒªÓÃÓÚSEO£¬¸æËßËÑË÷ÒıÇæÒ»¸ö¹ØÓÚÄúÕ¾µãµÄ¼òµ¥ÃèÊö£¬Í¨³£½¨ÒéÔÚÆäÖĞ°üº¬ÄúÍøÕ¾µÄ¹Ø¼ü´Ê¡£
-## keywords	ÍøÕ¾µÄ¹Ø¼ü´Ê¡£Ö§Ô®¶à¸ö¹Ø¼ü´Ê¡£
-## author	ÄúµÄÃû×Ö
-## language	ÍøÕ¾Ê¹ÓÃµÄÓïÑÔ¡£¶ÔÓÚ¼òÌåÖĞÎÄÓÃ»§À´Ëµ£¬Ê¹ÓÃ²»Í¬µÄÖ÷Ìâ¿ÉÄÜĞèÒªÉèÖÃ³É²»Í¬µÄÖµ£¬Çë²Î¿¼ÄãµÄÖ÷ÌâµÄÎÄµµ×ÔĞĞÉèÖÃ£¬³£¼ûµÄÓĞ zh-HansºÍ zh-CN¡£
-## timezone	ÍøÕ¾Ê±Çø¡£Hexo Ä¬ÈÏÊ¹ÓÃÄúµçÄÔµÄÊ±Çø¡£Çë²Î¿¼ Ê±ÇøÁĞ±í ½øĞĞÉèÖÃ£¬Èç America/New_York, Japan, ºÍ UTC ¡£Ò»°ãµÄ£¬¶ÔÓÚÖĞ¹ú´óÂ½µØÇø¿ÉÒÔÊ¹ÓÃ Asia/Shanghai¡£
-title: °¬Ã×ÀòºÍËıµÄĞ¡ĞÜÃÇ
-subtitle: 'Ö÷Ò³'
-description: 'Ğ¡ĞÜºÍ°¬Ã×ÀòµÄĞ¡Ğ¡ÀÖÔ°'
-keywords:²©¿Í, Ö÷Ò³
+# Site ç½‘ç«™
+## title	ç½‘ç«™æ ‡é¢˜
+## subtitle	ç½‘ç«™å‰¯æ ‡é¢˜
+## description	ç½‘ç«™æè¿°ï¼Œä¸»è¦ç”¨äºSEOï¼Œå‘Šè¯‰æœç´¢å¼•æ“ä¸€ä¸ªå…³äºæ‚¨ç«™ç‚¹çš„ç®€å•æè¿°ï¼Œé€šå¸¸å»ºè®®åœ¨å…¶ä¸­åŒ…å«æ‚¨ç½‘ç«™çš„å…³é”®è¯ã€‚
+## keywords	ç½‘ç«™çš„å…³é”®è¯ã€‚æ”¯æ´å¤šä¸ªå…³é”®è¯ã€‚
+## author	æ‚¨çš„åå­—
+## language	ç½‘ç«™ä½¿ç”¨çš„è¯­è¨€ã€‚å¯¹äºç®€ä½“ä¸­æ–‡ç”¨æˆ·æ¥è¯´ï¼Œä½¿ç”¨ä¸åŒçš„ä¸»é¢˜å¯èƒ½éœ€è¦è®¾ç½®æˆä¸åŒçš„å€¼ï¼Œè¯·å‚è€ƒä½ çš„ä¸»é¢˜çš„æ–‡æ¡£è‡ªè¡Œè®¾ç½®ï¼Œå¸¸è§çš„æœ‰ zh-Hanså’Œ zh-CNã€‚
+## timezone	ç½‘ç«™æ—¶åŒºã€‚Hexo é»˜è®¤ä½¿ç”¨æ‚¨ç”µè„‘çš„æ—¶åŒºã€‚è¯·å‚è€ƒ æ—¶åŒºåˆ—è¡¨ è¿›è¡Œè®¾ç½®ï¼Œå¦‚ America/New_York, Japan, å’Œ UTC ã€‚ä¸€èˆ¬çš„ï¼Œå¯¹äºä¸­å›½å¤§é™†åœ°åŒºå¯ä»¥ä½¿ç”¨ Asia/Shanghaiã€‚
+title: è‰¾ç±³è‰å’Œå¥¹çš„å°ç†Šä»¬
+subtitle: 'ä¸»é¡µ'
+description: 'å°ç†Šå’Œè‰¾ç±³è‰çš„å°å°ä¹å›­'
+keywords:åšå®¢, ä¸»é¡µ
 author: EmilyBear
 language: zh-Hans
 timezone: 'UTC+8'
 
-# URL ÓÀ¾ÃÁ´½Ó
+# URL æ°¸ä¹…é“¾æ¥
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-## ÔÚ´ËÉèÖÃÍøÕ¾µÄÓÀ¾ÃÁ´½Ó
+## åœ¨æ­¤è®¾ç½®ç½‘ç«™çš„æ°¸ä¹…é“¾æ¥
 url: https://emilybear.github.io/
 permalink: :id|:year-:month-:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: false 
-  	### ÊÇ·ñÔÚÓÀ¾ÃÁ´½ÓÖĞ±£ÁôÎ²²¿µÄ index.html
+  ### æ˜¯å¦åœ¨æ°¸ä¹…é“¾æ¥ä¸­ä¿ç•™å°¾éƒ¨çš„ index.html
   trailing_html: false 
-  	### ÊÇ·ñÔÚÓÀ¾ÃÁ´½ÓÖĞ±£ÁôÎ²²¿µÄ .html
+  ### æ˜¯å¦åœ¨æ°¸ä¹…é“¾æ¥ä¸­ä¿ç•™å°¾éƒ¨çš„ .html
 
-# Directory Ä¿Â¼
+# Directory ç›®å½•
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -40,7 +40,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
-# Writing ÎÄÕÂ
+# Writing æ–‡ç« 
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
@@ -93,18 +93,18 @@ time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
 
-# Pagination ·ÖÒ³
-## Set per_page to 0 to disable pagination Ã¿Ò³ÏÔÊ¾µÄÎÄÕÂÁ¿ (0 = ¹Ø±Õ·ÖÒ³¹¦ÄÜ)
+# Pagination åˆ†é¡µ
+## Set per_page to 0 to disable pagination æ¯é¡µæ˜¾ç¤ºçš„æ–‡ç« é‡ (0 = å…³é—­åˆ†é¡µåŠŸèƒ½)
 per_page: 5
 pagination_dir: page
 
-# Include / Exclude file(s) °üÀ¨»ò²»°üÀ¨Ä¿Â¼ºÍÎÄ¼ş
+# Include / Exclude file(s) åŒ…æ‹¬æˆ–ä¸åŒ…æ‹¬ç›®å½•å’Œæ–‡ä»¶
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
 ignore:
 
-# Extensions À©Õ¹
+# Extensions æ‰©å±•
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: landscape
