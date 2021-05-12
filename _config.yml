@@ -26,9 +26,9 @@ permalink: :id|:year-:month-:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: false 
-  ### 是否在永久链接中保留尾部的 index.html
+  # 是否在永久链接中保留尾部的 index.html
   trailing_html: false 
-  ### 是否在永久链接中保留尾部的 .html
+  # 是否在永久链接中保留尾部的 .html
 
 # Directory 目录
 source_dir: source
@@ -115,3 +115,4 @@ deploy:
   type: 'git'                                                              
   repo: https://github.com/EmilyBear/EmilyBear.github.io.git
   branch: master
+  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }})
