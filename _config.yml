@@ -13,7 +13,7 @@
 title: 艾米莉和她的小熊们
 subtitle: '主页'
 description: '小熊和艾米莉的小小乐园'
-keywords:博客, 主页
+keywords: 博客, 主页
 author: EmilyBear
 language: zh-Hans
 timezone: 'UTC+8'
@@ -112,4 +112,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: 'git'                                                              
+  repo: https://github.com/EmilyBear/EmilyBear.github.io.git
+  branch: master
