@@ -1,7 +1,12 @@
 ---
 title: Hello World
+date: 2016-02-16 22:07:08
+top: 2
+abbrlink: 1
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+<!-- more -->
 
 ## Quick Start
 
@@ -36,3 +41,11 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+
+## Theme
+
+### 选择主题
+
+### 安装主题
+
+### 调试主题并部署

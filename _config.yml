@@ -15,7 +15,7 @@ subtitle: '正在建设中'
 description: '小熊和艾米莉的小小乐园'
 keywords: 博客, 主页
 author: EmilyBear
-language: zh-Hans
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL 永久链接
@@ -110,7 +110,7 @@ ignore:
 # Extensions 扩展
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-next-7.8.0
+theme: next-7.8.0
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
