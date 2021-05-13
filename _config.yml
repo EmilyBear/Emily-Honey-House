@@ -16,7 +16,7 @@ description: '小熊和艾米莉的小小乐园'
 keywords: 博客, 主页
 author: EmilyBear
 language: zh-Hans
-timezone: 'Asia/HongKong'
+timezone: 'Asia/Shanghai'
 
 # URL 永久链接
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -114,5 +114,5 @@ theme: landscape
 deploy:
   type: 'git'                                                              
   repo: https://github.com/EmilyBear/EmilyBear.github.io.git
-  branch: master
+  branch: main
   message: Site updated
