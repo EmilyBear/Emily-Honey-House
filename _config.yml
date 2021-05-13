@@ -22,7 +22,7 @@ timezone: 'Asia/Shanghai'
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 ## 在此设置网站的永久链接
 url: https://emilybear.github.io/
-permalink: :id|:year-:month-:day/:title/
+permalink: :id/:year-:month-:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: false 
