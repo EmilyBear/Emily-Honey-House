@@ -11,7 +11,7 @@
 ## language	网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 zh-Hans和 zh-CN。
 ## timezone	网站时区。Hexo 默认使用您电脑的时区。请参考 时区列表 进行设置，如 America/New_York, Japan, 和 UTC 。一般的，对于中国大陆地区可以使用 Asia/Shanghai。
 title: 艾米莉和她的小熊们
-subtitle: '主页'
+subtitle: '正在建设中'
 description: '小熊和艾米莉的小小乐园'
 keywords: 博客, 主页
 author: EmilyBear
@@ -22,13 +22,16 @@ timezone: 'Asia/Shanghai'
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 ## 在此设置网站的永久链接
 url: https://emilybear.github.io/
-permalink: :id/:year-:month-:day/:title/
+permalink: :abbrlink/:year-:month-:day/
 permalink_defaults:
 pretty_urls:
   trailing_index: false 
   # 是否在永久链接中保留尾部的 index.html
   trailing_html: false 
   # 是否在永久链接中保留尾部的 .html
+abbrlink:
+  alg: crc32 # 算法：crc16(default) and crc32
+  rep: dec # 进制：dec(default) and hex
 
 # Directory 目录
 source_dir: source
@@ -107,7 +110,7 @@ ignore:
 # Extensions 扩展
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-next-7.8.0
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
