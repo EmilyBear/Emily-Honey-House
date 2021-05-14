@@ -1012,3 +1012,6 @@ images: images
 recent_posts: true
 recent_posts_title: 近期文章
 recent_posts_layout: block
+
+# JiaThis 分享服务
+jiathis: true
