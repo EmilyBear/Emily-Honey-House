@@ -49,12 +49,12 @@ body {
 }
 
 ///标题下的两个横线
-.logo-line-before i,
-.logo-line-after i {
-  background: rgba(255,255,255,0.9);
+.logo-line {
+  background: rgba(255,255,255,0.8);
   display: block;
   height: 2px;
-  position: relative;
+  margin: 0 auto;
+  width: 80%;
 }
 
 a,
@@ -74,6 +74,11 @@ span.exturl {
   background: transparent;
   color: rgba(255,255,255,0.9);
   padding: 20px 10px;
+}
+
+//TOC目录默认展开两级
+.post-toc .nav .nav-level-1>.nav-child {
+  display: block;
 }
 
 // 文章内链接文本样式

@@ -9,7 +9,7 @@ Hi there! 欢迎来到EmilyBear的小站！这是一个在Github托管的站点�
 
 <!-- more -->
 
-## 小站的历史
+# 小站的历史
 
 　　虽然现在站点的底部写着`© 2016-2021`，但实际上目前在用的这个站点只是2021年4月底建立的，建站和编辑主题花了我三天的业余时间，荒废多年的HTML基础语言几乎没有发挥作用。
 
@@ -19,19 +19,19 @@ Hi there! 欢迎来到EmilyBear的小站！这是一个在Github托管的站点�
 
 　　“新生”的小站之所以选择[Hexo框架](https://hexo.io/zh-cn/ "点击链接跳转到Hexo网站")，老实说这是上个月的事情了，我都忘记是为啥了，可能是冲着丰富的主题来吧。在我写这篇文章时小站采用了[Next主题](https://theme-next.iissnan.com/ "点击链接跳转到Next主题的网站")的Mist风格，这应该很明显吧，毕竟我没有进行太大改动。嗯，本来想记录一下小站“复活”的艰辛历程，但对于上个月的事情，一方面我记不清了，另一方面往事不堪回首，就不回首了。接下来就是一些技术方面的备忘了，我不是程序员，也不懂这方面的东西，所以我会写得很通俗甚至会有些不准确。
 
-## Hexo
+# Hexo
 
-### 准备
+## 准备
 
 　　Hexo的建立需要系统具备可以运行它的环境，这点看文档就行了。
 
 　　文档地址：<https://hexo.io/zh-cn/docs/>
 
-### 建站
+## 建站
 
 　　文档记述得比较清楚，理解难度不大，直接照做就是了。
 
-### 部署
+## 部署
 
 　　在参照文档完成主题（Theme）基本配置后（更详细的主题配置以后再说），此时一个完整的站点已经在本地搭建好了，现在就是要把它放到网络上。这个过程叫部署，文档提供了多种部署方式，我直接使用了Git的“一键部署”，省事。部署事前的准备可以看文档。
 
@@ -39,7 +39,7 @@ Hi there! 欢迎来到EmilyBear的小站！这是一个在Github托管的站点�
 
 　　之后是通过ssh Key让我的Github仓库与本地站点建立联系，并便于后续更新。步骤如下：
 
-#### SSH key配置
+### SSH key配置
 
 1.**检查本机是否有SSH key设置**
 
@@ -99,7 +99,7 @@ Enter passphrase for key '/c/Users/xxxx_000/.ssh/id_rsa':  #生成ssh kye是密
 
 　　现在在本地站点文件夹打开Git Bash，输入`hexo deploy`，将本地站点推送到Github仓库。这样就部署完成了。
 
-### 写作
+## 写作
 
 　　在本地站点文件夹Git Bash，执行下列命令来创建一篇新文章或者新的页面。
 
@@ -113,9 +113,9 @@ $ hexo new [layout] <title>
 
 参见文档: [Writing](https://hexo.io/docs/writing.html)
 
-### 更新文件
+## 更新文件
 
-#### 本地调试（启动本地服务器）
+### 本地调试（启动本地服务器）
 
 　　本地调试可以使用`hexo server`命令，以启动本地服务器，一般可以简写为`hexo s`。
 
@@ -125,7 +125,7 @@ $ hexo server
 
 参见文档: [Server](https://hexo.io/docs/server.html)
 
-#### 清理缓存文件
+### 清理缓存文件
 
 ```powershell
 $ hexo clean
@@ -134,7 +134,7 @@ $ hexo clean
 　　还可简写为`hexo cl`。
 
 
-#### 生成静态文件
+### 生成静态文件
 
 　　生成静态文件即生成更新后的本地网站文件以用于推送至网络，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。使用以下命令：
 
@@ -156,22 +156,22 @@ $ hexo deploy
 
 参见文档: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
-## 主题（Theme）
+# 主题（Theme）
 
-### 选择主题
+## 选择主题
 
 　　[Hexo的主题页面](https://hexo.io/themes/)收录丰富的主题供选择。其中[Next主题](https://theme-next.iissnan.com/ "点击链接跳转到Next主题的网站")是其中最受欢迎的，站点在写下这篇文章时使用的正是这个主题。
 
-### 安装主题
+## 安装主题
 
 　　直接参考[文档](https://theme-next.iissnan.com/getting-started.html)。
 
 　　特别提醒，如果你和我一样对Git完全不熟的话，还是选择“下载稳定版本”为好，当初“克隆最新版本”给我带来了不少麻烦，比如无法推送主题文件。
 
-### 调试主题并部署
+## 调试主题并部署
 
 　　直接参考[文档](https://theme-next.iissnan.com/getting-started.html)。
 
-### Next主题进阶配置和美化
+## Next主题进阶配置和美化
 
 　　日后再说，研究四史去了。

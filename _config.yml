@@ -10,9 +10,9 @@
 ## author	您的名字
 ## language	网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 zh-Hans和 zh-CN。
 ## timezone	网站时区。Hexo 默认使用您电脑的时区。请参考 时区列表 进行设置，如 America/New_York, Japan, 和 UTC 。一般的，对于中国大陆地区可以使用 Asia/Shanghai。
-title: 艾米莉和她的小熊们
+title: 艾米莉的后花园
 subtitle: '正在建设中'
-description: '小熊和艾米莉的小小乐园'
+description: '小熊们和艾米莉辛勤建设的小小乐园'
 keywords: 博客, 主页
 author: EmilyBear
 language: zh-CN
@@ -110,7 +110,7 @@ ignore:
 # Extensions 扩展
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next-7.8.0
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -136,7 +136,6 @@ search:
   limit: 10000
 
 # 字数及访问时间统计
-
 symbols_count_time:
   symbols: true #是否统计字数
   time: false #是否统计阅读时长
