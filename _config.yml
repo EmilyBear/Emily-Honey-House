@@ -119,3 +119,26 @@ deploy:
   repo: https://github.com/EmilyBear/EmilyBear.github.io.git
   branch: main
   message: Site updated
+
+# RSS 依赖 hexo-generator-feed 插件
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 10
+  hub:
+  content: 'true'
+
+# Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# 字数及访问时间统计
+
+symbols_count_time:
+  symbols: true #是否统计字数
+  time: false #是否统计阅读时长
+  total_symbols: true #是否统计总字数
+  total_time: false #是否统计总阅读时长

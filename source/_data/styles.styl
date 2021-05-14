@@ -1,0 +1,138 @@
+// 背景
+body {
+  background-image:url(../images/bg.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+}
+
+// 主页文章添加阴影效果
+.posts-expand { 
+	.post {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	  border-radius: 20px;
+		-webkit-box-shadow: 5px 5px 20px rgba(119,118,118,.6);
+		-moz-box-shadow: 5px 5px 20px rgba(119,118,118,.6);
+	}
+}
+
+//主区域背景颜色与透明度设置
+.main-inner {
+  background: rgba(255,255,255,0.8);
+  margin-top: 60px;
+  padding: 20px 60px 60px 60px;
+  min-height: 300px;
+}
+
+//侧边框背景颜色与透明度设置
+.sidebar-inner {
+  background: rgba(255,255,255,0);
+}
+
+//搜索框（local-search）背景颜色与透明度设置
+.popup {
+  opacity: 0.8;
+}
+
+//菜单栏背景、字体颜色与透明度设置
+.header {
+  background: transparent;
+}
+
+///网站标题
+.brand{
+  color: rgba(255,255,255,0.9);
+  &:hover { 
+      color: rgba(255,255,255,0.75);
+      }
+}
+
+///标题下的两个横线
+.logo-line-before i,
+.logo-line-after i {
+  background: rgba(255,255,255,0.9);
+  display: block;
+  height: 2px;
+  position: relative;
+}
+
+a,
+span.exturl {
+  color: rgba(255,255,255,1);
+}
+
+.menu-item-active a,
+.menu .menu-item a:hover,
+.menu .menu-item span.exturl:hover {
+  color: rgba(255,255,255,1);
+  background: rgba(221,221,221,0.4);
+}
+
+//底部栏
+.footer {
+  background: transparent;
+  color: rgba(255,255,255,0.9);
+  padding: 20px 10px;
+}
+
+// 文章内链接文本样式
+.post-body a{
+  color: #0593d3;
+  border-bottom: none;
+}
+
+//文章末尾的“关注我”
+.followme {
+  align-items: center;
+  background: #333;
+  border-left: 3px solid #ff2a2a;
+  color: #bbb;
+}
+
+// Archive部分
+.posts-collapse .post {
+    color: #222
+}
+.posts-collapse .post-title a, .posts-collapse .post-title span.exturl {
+    color: #555;
+}
+.posts-collapse .post-header {
+    border-bottom: 1px dashed #ffb18f;
+}
+.posts-collapse .post-header::before {
+    background: #ffb18f;
+}
+.page-archive .posts-collapse .archive-move-on {
+    background: rgb(252, 100, 35);
+}
+.posts-collapse .collection-title::before {
+    background: #ffb18f;
+}
+
+// 圆角计划
+.header-inner {
+  border-radius: 50px 50px 18px 18px;
+}
+.site-brand-container {
+  border-radius: 18px 18px 0 0;
+  +mobile() {
+    border-radius: 18px;
+  }
+}
+.sidebar-inner {
+  border-radius: 18px;
+}
+.back-to-top {
+  border-radius: 0 0 18px 18px;
+}
+.post-block {
+  border-radius: 18px !important;
+  margin-top: 18px;
+}
+.pagination {
+  border-radius: 18px !important;
+}
+.comments {
+  border-radius: 18px !important;
+}
