@@ -362,7 +362,7 @@ codeblock:
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
   highlight_theme: 
-    light: tomorrow
+    light: night eighties
     dark: night-owl
   prism:
     light: prism-material-light
@@ -373,7 +373,7 @@ codeblock:
     # Show text copy result.
     show_result: false
     # Available values: default | flat | mac
-    style: flat
+    style: mac
 
 back2top:
   enable: true
