@@ -2,7 +2,7 @@
 title: Markdown 语法手册
 date: 2016-02-19 16:23:11
 tags:
-abbrlink: 1
+abbrlink: 2
 categories:
 - [站点文档]
 comment: false
@@ -383,7 +383,7 @@ B --> C{Let me think}
 C -->|One| D[Laptop]
 C -->|Two| E[iPhone]
 C -->|Three| F[fa:fa-car Car]
-``` 
+```
 
 **更多语法参考：[Mermaid 流程图语法参考](https://mermaid-js.github.io/mermaid/#/flowchart)**
 
@@ -475,7 +475,7 @@ C -->|Three| F[fa:fa-car Car]
         - [ ] 准备邮轮上需要携带的物品
         - [ ] 浏览日本免税店的物品
         - [x] 购买蓝宝石公主号七月一日的船票
-        
+
 对应显示如下待办事宜 Todo 列表：
         
 - [ ] **Markdown 开发**
@@ -489,7 +489,6 @@ C -->|Three| F[fa:fa-car Car]
     - [ ] 准备邮轮上需要携带的物品
     - [ ] 浏览日本免税店的物品
     - [x] 购买蓝宝石公主号七月一日的船票
-        
 ## 注脚
 
 [^footnote]: 这是一个 *注脚* 的 **文本**。
