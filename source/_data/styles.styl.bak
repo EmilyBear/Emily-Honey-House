@@ -60,7 +60,7 @@ body {
 ///菜单控件
 a,
 span.exturl {
-  color: rgba(255,255,255,1);
+  color: rgba(233,150,150,1);
 }
 
 .menu-item-active a,
@@ -114,20 +114,32 @@ span.exturl {
 .posts-collapse .post {
     color: #222
 }
-.posts-collapse .post-title a, .posts-collapse .post-title span.exturl {
-    color: #555;
+.posts-collapse .post-content::before {
+    background: #fdd4d4;
 }
-.posts-collapse .post-header {
+.posts-collapse .post-content::before {
     border-bottom: 1px dashed #ffb18f;
 }
-.posts-collapse .post-header::before {
+.posts-collapse .post-content .post-header::before {
     background: #ffb18f;
 }
-.page-archive .posts-collapse .archive-move-on {
-    background: rgb(252, 100, 35);
+.posts-collapse .post-content .collection-title::before {
+    background: rgb(252,100,35);
 }
-.posts-collapse .collection-title::before {
+.posts-collapse .post-content .collection-year::before {
     background: #ffb18f;
+    border: 1px solid #fff;
+}
+
+//图片阴影及放大时背景透明度改善
+
+.medium-zoom-overlay {
+  background: rgba(187,187,1,0.85);
+}
+
+img {
+  box-shadow: 0px 0px 20px 0px #000;
+  border-radius: 10px 10px 10px 10px
 }
 
 // 圆角计划
