@@ -34,28 +34,42 @@ abbrlink:
   rep: dec # 进制：dec(default) and hex
 
 # Directory 目录
+## 资源文件夹，这个文件夹用来存放内容，例如我们用markdown编写的博文
 source_dir: source
+## 公共文件夹，这个文件夹用于存放生成的静态博客文件。
 public_dir: public
+## 标签文件夹
 tag_dir: tags
+## 归档文件夹
 archive_dir: archives
+## 分类文件夹
 category_dir: categories
+## Include code 文件夹
 code_dir: downloads/code
+## 国际化（i18n）文件夹
 i18n_dir: :lang
+## 跳过指定文件的渲染，通过使用 glob 来配置路径
 skip_render:
 
 # Writing 文章
-new_post_name: :title.md # File name of new posts
+new_post_name: :title.md # 默认的新博文名称
+## 默认布局
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: false # 把标题转换为 titlecase（titlecase指的是将每个单词首字母转换成大写）
+## 在新标签中打开链接
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
+##把文件名称转换为 1 小写或 2 大写, 0 表示不变
 filename_case: 0
+## 是否显示草稿
 render_drafts: false
-post_asset_folder: false
+##是否启用资源文件夹（用来存放相对路径图片或文件）
+post_asset_folder: true
 relative_link: false
 future: true
+## 代码高亮
 highlight:
   enable: true
   line_number: true
