@@ -79,6 +79,7 @@ span.exturl {
   background: transparent;
   color: rgba(255,255,255,0.9);
   text-align: center;
+  padding: 35px; 
 }
 
 .footer-inner {

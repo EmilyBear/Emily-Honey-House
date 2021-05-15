@@ -1,21 +1,30 @@
 ---
-title: Markdown
+title: Markdown 语法手册
 date: 2016-02-19 16:23:11
 tags:
 abbrlink: 1
 categories:
 - [站点文档]
+comment: false
 ---
+>Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML （或者 HTML ）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。本文详细介绍了 Markdown 的主要语法规则。
 
-Markdown 简明语法手册
+<!-- more -->
+——来自维基百科
 
-原始链接：https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown
-仅供个人测试与备忘之用，
+　　Markdown 方便记忆、容易书写，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档，且语法和各类资源的支持不断完善，因而受到了许多人的欢迎。
+
+
+## Markdown 简明语法手册
+
+[原始链接](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown>)，有删改，仅供个人测试与备忘之用。
+
+
 ---
 
 ### 斜体和粗体
 
-使用 * 和 ** 表示斜体和粗体。
+使用 `*` 和 `**` 表示斜体和粗体。
 
 示例：
 
@@ -23,7 +32,7 @@ Markdown 简明语法手册
 
 ### 分级标题
 
-使用 === 表示一级标题，使用 --- 表示二级标题。
+使用 `===` 表示一级标题，使用 `---` 表示二级标题。
 
 示例：
 
@@ -37,25 +46,29 @@ Markdown 简明语法手册
 ### 这是一个三级标题
 ```
 
-你也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。
+也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。
 
-### 外链接
+### 超链接
 
-使用 \[描述](链接地址) 为文字增加外链接。
+使用 `[描述](链接地址 "title文本")` 为文字增加普通外链接。
 
 示例：
+>这是去往 [Github](https://github.com) 的链接。
 
-这是去往 [Github](https://github.com) 的链接。
+还可以使用 `[文件名](路径)` 添加指向本地文件的链接，示例采用了相对链接，建议使用绝对链接。
+
+示例：
+>这里引用了 [icon.png](./images/icon.png) 文件。
 
 ### 无序列表
 
-使用 *，+，- 表示无序列表。
+使用 `*`，`+`，`-` 表示无序列表。
 
 示例：
 
-- 无序列表项 一
-- 无序列表项 二
-- 无序列表项 三
+>- 无序列表项 一
+>- 无序列表项 二
+>- 无序列表项 三
 
 ### 有序列表
 
@@ -63,13 +76,13 @@ Markdown 简明语法手册
 
 示例：
 
-1. 有序列表项 一
-2. 有序列表项 二
-3. 有序列表项 三
+>1. 有序列表项 一
+>2. 有序列表项 二
+>3. 有序列表项 三
 
 ### 文字引用
 
-使用 > 表示文字引用。
+使用 `>` 表示文字引用。
 
 示例：
 
@@ -85,7 +98,7 @@ Markdown 简明语法手册
 
 ### 代码块
 
-使用 四个缩进空格 表示代码块。
+使用 四个缩进空格 表示代码块，在半角输入状态下，在键盘上用两次 `Tab` 键实现快速缩进。
 
 示例：
 
@@ -93,13 +106,59 @@ Markdown 简明语法手册
 
 ### 插入图像
 
-使用 \!\[描述](图片链接地址) 插入图像。
+使用 `![描述](图片链接地址 "替代文本")` 插入图像。
 
 示例：
 
-![我的头像](https://raw.githubusercontent.com/EmilyBear/EmilyBear.github.io/main/images/avatar.jpg)
+```
+![我的头像](https://raw.githubusercontent.com/EmilyBear/EmilyBear.github.io/main/images/avatar.jpg "ナチュラルファンタジー")
+```
 
-# Markdown 进阶语法手册
+![我的头像](https://raw.githubusercontent.com/EmilyBear/EmilyBear.github.io/main/images/avatar.jpg "ナチュラルファンタジー")
+
+### 字符转义
+
+反斜线 `\` 用于插入在 Markdown 语法中有特殊作用的字符。分别输入：
+
+```
+这是用来 *演示* 的 _文本_，
+
+这是用来 \*演示\* 的 \_文本\_。
+
+```
+
+会显示为：
+
+这是用来 *演示* 的 _文本_，
+
+这是用来 \*演示\* 的 \_文本\_。
+
+Markdown 的字符转义功能有限，`\` 只能转义一个或一对字符，可以转义的字符包括：
+
+```
+\
+`
+*
+_
+{}
+[]
+()
+#
++
+-
+.
+!
+```
+
+### 分隔线
+
+在一行中使用三个或更多的 `*`、`-` 或 `_` 来添加分隔线，多个字符之间可以有空格（空白符），但不能有其他字符。
+
+---
+
+## Markdown 进阶语法手册
+
+并非所有站点都支持下列提到的进阶语法，包括本站。
 
 ### 内容目录
 
@@ -111,11 +170,11 @@ Markdown 简明语法手册
 
 在编辑区任意行的列首位置输入以下代码给文稿标签：
 
-标签： 数学 英语 Markdown
+`标签： 数学 英语 Markdown`
 
 或者
 
-Tags： 数学 英语 Markdown
+`Tags： 数学 英语 Markdown`
 
 ### 删除线
 
@@ -131,15 +190,65 @@ Tags： 数学 英语 Markdown
 
 这是第二个注脚[^footnote2]的样例。
 
+### 表格
+
+#### 单元格和表头
+
+使用 `|` 来分隔不同的单元格，使用 `-` 来分隔表头和其他行。为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界：
+
+```
+|    name    | age |
+| ---------- | --- |
+| Emily      |  20 |
+| Mike       |  32 |
+```
+
+|    name    | age |
+| ---------- | --- |
+| Emily      |  12 |
+| Mike       |  32 |
+
+#### 对齐
+
+在表头下方的分隔线标记中加入 `:`，即可标记下方单元格内容的对齐方式：
+
+`:---` 代表左对齐
+
+`:--:` 代表居中对齐
+
+`---:` 代表右对齐
+
+此外，表格中也可以插入其他 Markdown 中的行内标记。
+
+```
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机     | \$1600 |   5     |
+| 手机        |   \$12   |   12   |
+| 管线        |    \$1    |  234  |
+```
+
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机     | \$1600 |   5     |
+| 手机        |   \$12   |   12   |
+| 管线        |    \$1    |  234  |
+
+**可以在 [Tab Convert Online](https://tableconvert.com/) 像 Excel 那样直观地编辑表格，并输出为 Markdown 等其他语言。**
+
 ### LaTeX 公式
 
 $ 表示行内公式： 
 
-质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。
+质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达，只需输入 `$E=mc^2$` 。
 
-$$ 表示整行公式：
+`$$` 表示整行公式[^footnote3]：
 
-$$\sum_{i=1}^n a_i=0$$
+```
+$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
+
+$$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
+```
 
 $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
 
@@ -149,7 +258,9 @@ $$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 
 ### 加强的代码块
 
-支持四十一种编程语言的语法高亮的显示，行号显示。
+Markdown 支持四十一种编程语言的语法高亮的显示，行号显示。在 ``` 之后加入编程语言名称即可实现语法高亮。
+
+但包括本站在内的部分网站只支持高亮一些常见的编程语言。
 
 非代码示例：
 
@@ -198,10 +309,12 @@ document.write(fib(10));
 
 ### 流程图
 
+待补充。可前往参考链接。
+
 #### 示例
 
 ```flow
-st=>start: Start:>https://www.zybuluo.com
+st=>start: Start:>https://emilybear.github.io/
 io=>inputoutput: verification
 op=>operation: Your Operation
 cond=>condition: Yes or No?
@@ -213,7 +326,7 @@ cond(yes)->e
 cond(no)->sub->io
 ```
 
-#### 更多语法参考：[流程图语法参考](http://adrai.github.io/flowchart.js/)
+**更多语法参考：[流程图语法参考](https://www.jianshu.com/p/a0dabf0b6815/)**
 
 ### 序列图
 
@@ -235,9 +348,11 @@ C->>D: Open arrow
 D-->>A: Dashed open arrow
 ```
 
-#### 更多语法参考：[序列图语法参考](http://bramp.github.io/js-sequence-diagrams/)
+**更多语法参考：[序列图语法参考](http://bramp.github.io/js-sequence-diagrams/)**
 
 ### 甘特图
+
+[^footnote4]
 
 甘特图内在思想简单。基本是一条线条图，横轴表示时间，纵轴表示活动（项目），线条表示在整个期间上计划和实际的活动完成情况。它直观地表明任务计划在什么时候进行，及实际进展与计划要求的对比。
 
@@ -257,18 +372,20 @@ D-->>A: Dashed open arrow
         验收: 3d
 ```
 
-#### 更多语法参考：[甘特图语法参考](https://knsv.github.io/mermaid/#gant-diagrams)
+**更多语法参考：[甘特图语法参考](https://mermaid-js.github.io/mermaid/#/gantt)**
 
-### Mermaid 流程图
+### Mermaid 流程图 
 
-```graphLR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-```
+``` mermaid! 
+graph TD
+A[Christmas] -->|Get money| B(Go shopping)
+B --> C{Let me think}
+C -->|One| D[Laptop]
+C -->|Two| E[iPhone]
+C -->|Three| F[fa:fa-car Car]
+``` 
 
-#### 更多语法参考：[Mermaid 流程图语法参考](https://knsv.github.io/mermaid/#flowcharts-basic-syntax)
+**更多语法参考：[Mermaid 流程图语法参考](https://mermaid-js.github.io/mermaid/#/flowchart)**
 
 ### Mermaid 序列图
 
@@ -279,30 +396,36 @@ D-->>A: Dashed open arrow
     end
 ```
 
-#### 更多语法参考：[Mermaid 序列图语法参考](https://knsv.github.io/mermaid/#sequence-diagrams)
-
-### 表格支持
-
-| 项目        | 价格   |  数量  |
-| --------   | -----:  | :----:  |
-| 计算机     | \$1600 |   5     |
-| 手机        |   \$12   |   12   |
-| 管线        |    \$1    |  234  |
-
+**更多语法参考：[Mermaid 序列图语法参考](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)**
 
 ### 定义型列表
 
 名词 1
+
+输入：
+```
+:   定义 1（左侧有一个可见的冒号和四个不可见的空格）
+```
+
 :   定义 1（左侧有一个可见的冒号和四个不可见的空格）
 
 代码块 2
+
+输入：
+
+```
+:   这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）
+
+        代码块（左侧有八个不可见的空格）
+```
+
 :   这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）
 
         代码块（左侧有八个不可见的空格）
 
 ### Html 标签
 
-本站支持在 Markdown 语法中嵌套 Html 标签，譬如，你可以用 Html 写一个纵跨两行的表格：
+部分网站支持在 Markdown 语法中嵌套 Html 标签。譬如，你可以用 Html 写一个纵跨两行的表格：
 
     <table>
         <tr>
@@ -335,19 +458,7 @@ D-->>A: Dashed open arrow
 
 ### 内嵌图标
 
-本站的图标系统对外开放，在文档中输入
-
-    <i class="icon-weibo"></i>
-
-即显示微博的图标： <i class="icon-weibo icon-2x"></i>
-
-替换 上述 `i 标签` 内的 `icon-weibo` 以显示不同的图标，例如：
-
-    <i class="icon-renren"></i>
-
-即显示人人的图标： <i class="icon-renren icon-2x"></i>
-
-更多的图标和玩法可以参看 [font-awesome](http://fortawesome.github.io/Font-Awesome/3.2.1/icons/) 官方网站。
+一些网站支持对外开放 [font-awesome](http://fortawesome.github.io/Font-Awesome/3.2.1/icons/) 的图标，可参考对应网站的说明文档。
 
 ### 待办事宜 Todo 列表
 
@@ -379,7 +490,12 @@ D-->>A: Dashed open arrow
     - [ ] 浏览日本免税店的物品
     - [x] 购买蓝宝石公主号七月一日的船票
         
-        
+## 注脚
+
 [^footnote]: 这是一个 *注脚* 的 **文本**。
 
 [^footnote2]: 这是另一个 *注脚* 的 **文本**。
+
+[^footnote3]: 受框架限制，站点的 Markdown 只支持部分简单的公式的渲染。
+
+[^footnote4]: 由于种种原因，本站不支持 Mermaid 。
