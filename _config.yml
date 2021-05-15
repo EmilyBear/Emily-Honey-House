@@ -52,7 +52,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing 文章
-new_post_name: :title.md # 默认的新博文名称
+new_post_name: :year-:month-:day-:title.md # 默认的新博文名称
 ## 默认布局
 default_layout: post
 titlecase: false # 把标题转换为 titlecase（titlecase指的是将每个单词首字母转换成大写）
