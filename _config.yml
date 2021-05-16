@@ -97,6 +97,13 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+favicon:
+  small: source/_data/images/favicon-16x16-next.png
+  medium: source/_data/images/favicon-32x32-next.png
+  apple_touch_icon: source/_data/images/apple-touch-icon-next.png
+  safari_pinned_tab: source/_data/images/logo.svg
+  #android_manifest: /manifest.json
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -124,7 +131,8 @@ ignore:
 # Extensions 扩展
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+### 支持的主题：NExT 8.4.0 | Volantis 4.3.1
+theme: volantis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

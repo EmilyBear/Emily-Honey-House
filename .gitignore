@@ -8,4 +8,4 @@ public/
 _config.yml.bak
 source/_data/next.yml.bak
 *.bak
-*.bak
+source/_data/styles.styl.bak
