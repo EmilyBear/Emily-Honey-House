@@ -148,7 +148,7 @@ social:
   #Last.fm: https://www.last.fm/user/BetisRooney || lastfm-square
   #GoG.com: https://www.gog.com/u/EmilyBear || gamepad
   #Steam: https://steamcommunity.com/id/emilybear || steam
-  微博: https://weibo.com/yourname || fab fa-weibo
+  微博: https://weibo.com/u/5706386131 || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
@@ -631,11 +631,11 @@ livere_uid: # <your_uid>
 # For more information: https://gitalk.github.io
 gitalk:
   enable: true
-  github_id: emilybear
+  github_id: EmilyBear
   repo: EmilyBear.github.io
   client_id: 17ad0ed8722082949006
   client_secret: 04d9726f90f968bcc5cf83eaa1bf56519d103fe7
-  admin_user: emilybear
+  admin_user: EmilyBear
   distraction_free_mode: true # Facebook-like distraction free mode
   # When the official proxy is not available, you can change it to your own proxy address
   proxy: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token # This is official proxy adress

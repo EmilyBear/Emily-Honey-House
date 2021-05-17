@@ -3,20 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site 网站
-## title	网站标题
-## subtitle	网站副标题
-## description	网站描述，主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。
-## keywords	网站的关键词。支援多个关键词。
-## author	您的名字
-## language	网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 zh-Hans和 zh-CN。
-## timezone	网站时区。Hexo 默认使用您电脑的时区。请参考 时区列表 进行设置，如 America/New_York, Japan, 和 UTC 。一般的，对于中国大陆地区可以使用 Asia/Shanghai。
-title: 艾米莉的后花园
-subtitle: '正在建设中'
-description: '小熊们和艾米莉辛勤建设的小小乐园'
-keywords: 博客, 主页
-author: EmilyBear
-language: zh-CN
-timezone: 'Asia/Shanghai'
+title: 艾米莉的后花园 # 网站标题
+subtitle: '正在建设中'   # 网站副标题
+description: '小熊们和艾米莉辛勤建设的小小乐园' # 网站描述，主要用于SEO，告诉搜索引擎一个关于网站的简单描述，通常建议在其中包含网站的关键词。在部分主题中也会作为美化元素。
+keywords: 博客, 主页 # 网站的关键词，主要用于SEO，支持多个关键词。
+author: EmilyBear # 网站内容所有者的名字
+language: zh-CN # 网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考主题文档自行设置，常见的有 zh-CN 和 zh-Hans。
+timezone: 'Asia/Shanghai' # 网站时区。Hexo 默认使用您电脑的时区。请参考 时区列表 进行设置，如 America/New_York。对于中国大陆地区一般使用 Asia/Shanghai。
 
 # URL 永久链接
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -25,31 +18,21 @@ url: https://emilybear.github.io/
 permalink: :abbrlink/:year-:month-:day/
 permalink_defaults:
 pretty_urls:
-  trailing_index: false 
-  # 是否在永久链接中保留尾部的 index.html
-  trailing_html: false 
-  # 是否在永久链接中保留尾部的 .html
+  trailing_index: false  # 是否在永久链接中保留尾部的 index.html
+  trailing_html: false  # 是否在永久链接中保留尾部的 .html
 abbrlink:
   alg: crc32 # 算法：crc16(default) and crc32
   rep: dec # 进制：dec(default) and hex
 
 # Directory 目录
-## 资源文件夹，这个文件夹用来存放内容，例如我们用markdown编写的博文
-source_dir: source
-## 公共文件夹，这个文件夹用于存放生成的静态博客文件。
-public_dir: public
-## 标签文件夹
-tag_dir: tags
-## 归档文件夹
-archive_dir: archives
-## 分类文件夹
-category_dir: categories
-## Include code 文件夹
-code_dir: downloads/code
-## 国际化（i18n）文件夹
-i18n_dir: :lang
-## 跳过指定文件的渲染，通过使用 glob 来配置路径
-skip_render:
+source_dir: source # 资源文件夹，这个文件夹用来存放内容，例如我们用markdown编写的博文
+public_dir: public # 公共文件夹，这个文件夹用于存放生成的静态博客文件。
+tag_dir: tags # 标签文件夹
+archive_dir: archives # 归档文件夹
+category_dir: categories # 分类文件夹
+code_dir: downloads/code # Include code 文件夹
+i18n_dir: lang # 国际化（i18n）文件夹
+skip_render: # 跳过指定文件的渲染，通过使用 glob 来配置路径
 
 # Writing 文章
 new_post_name: :year-:month-:day-:title.md # 默认的新博文名称
@@ -57,16 +40,13 @@ new_post_name: :year-:month-:day-:title.md # 默认的新博文名称
 default_layout: post
 titlecase: false # 把标题转换为 titlecase（titlecase指的是将每个单词首字母转换成大写）
 ## 在新标签中打开链接
-external_link:
+external_link: # 把文件名称转换为 1 小写或 2 大写, 0 表示不变
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
-##把文件名称转换为 1 小写或 2 大写, 0 表示不变
-filename_case: 0
-## 是否显示草稿
-render_drafts: false
-##是否启用资源文件夹（用来存放相对路径图片或文件）
-post_asset_folder: true
+filename_case: 0 # 是否显示草稿
+render_drafts: false # 是否启用资源文件夹（用来存放相对路径图片或文件）
+post_asset_folder: true # 是否启用本地文件上传（如图片、视频等）
 relative_link: false
 future: true
 ## 代码高亮
@@ -83,7 +63,7 @@ prismjs:
   line_number: true
   tab_replace: ''
 
-# Home page setting
+# Home page setting 首页设置（部分主题不会生效）
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
@@ -97,7 +77,7 @@ default_category: uncategorized
 category_map:
 tag_map:
 
-favicon:
+favicon: # 在部分主题中不一定生效
   small: source/_data/images/favicon-16x16-next.png
   medium: source/_data/images/favicon-32x32-next.png
   apple_touch_icon: source/_data/images/apple-touch-icon-next.png
@@ -108,7 +88,7 @@ favicon:
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
 
-# Date / Time format
+# Date / Time format 日期/时间格式
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
@@ -122,17 +102,11 @@ updated_option: 'mtime'
 per_page: 5
 pagination_dir: page
 
-# Include / Exclude file(s) 包括或不包括目录和文件
+# Include / Exclude file(s) 包括/不包括“/source/”中的目录和文件
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
 ignore:
-
-# Extensions 扩展
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-### 支持的主题：NExT 8.4.0 | Volantis 4.3.1
-theme: volantis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -142,7 +116,13 @@ deploy:
   branch: main
   message: Site updated
 
-# RSS 依赖 hexo-generator-feed 插件
+# Extensions 扩展
+## 插件 Plugins: https://hexo.io/plugins/
+## 主题 Themes: https://hexo.io/themes/
+## 支持的主题：NExT 8.4.0 | Butterfly 3.7.7 | Volantis 4.3.1 | Landscape
+theme: butterfly
+
+## RSS 需要依赖 hexo-generator-feed 插件
 feed:
   type: rss2
   path: rss2.xml
@@ -150,24 +130,65 @@ feed:
   hub:
   content: 'true'
 
-# Search
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+## Search 需要依赖 hexo 的相关搜索插件
+#search:
+  #path: search.xml
+  #field: post
+  #format: html
+  #limit: 10000
 
-# 字数及访问时间统计
+## 字数及访问时间统计 需要依赖 hexo-wordcount 插件
 symbols_count_time:
-  symbols: true #是否统计字数
-  time: false #是否统计阅读时长
-  total_symbols: true #是否统计总字数
-  total_time: false #是否统计总阅读时长
+  symbols: true # 是否统计字数
+  time: false # 是否统计阅读时长
+  total_symbols: true # 是否统计总字数
+  total_time: false # 是否统计总阅读时长
 
-# Markdown渲染  
+## Markdown渲染 需要依赖相关 Markdown 渲染插件
 markdown_it_plus:
     # ...
     plugins:
         - plugin:
             name: markdown-it-checkbox
             enable: true
+        - plugin:
+            name: '@neilsustc/markdown-it-katex'
+            enable: true
+            options:
+              strict: false
+
+# Github Canlendar 需要依赖 hexo-githubcalendar 插件
+## 可在 https://github.com/Zfour/hexo-github-calendar/issues 根据特定主题使用对应配置模板
+githubcalendar:
+  enable: true
+  priority: 3
+  enable_page: /changelog
+  user: EmilyBear
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  githubcalendar_html: '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>'
+  pc_minheight: 280px
+  mobile_minheight: 0px
+  color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']"
+  # color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']" #浅紫色调
+  # color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']" #翠绿色调
+  # color: "['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c']" #天青色调
+  api: https://python-github-calendar-api.vercel.app/api
+  # api: https://python-gitee-calendar-api.vercel.app/api
+  calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js
+  plus_style: ""
+
+# 历史上的今天 需要依赖 hexo-history-calendar 插件支持
+## 仅适用于支持卡片侧边栏挂件的主题
+## 链接：https://zfe.space/post/hexo-history-calendar.html
+history_calendar:
+  priority: 0
+  enable: true
+  enable_page: /
+  layout:
+    type: class
+    name: sticky_layout
+    index: 0
+  temple_html: '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px" opacity="0.8"></div></div></div></div>' 

@@ -5,6 +5,7 @@ top: 2
 abbrlink: 1
 categories:
 - [站点文档]
+cover: false
 ---
 Hi there! 欢迎来到EmilyBear的小站！这是一个在Github托管的站点，现在的站点由Hexo框架搭建而成。这个小站用于记录一些自己的随想，也会在合法范围内转载一些我认为有价值的信息。
 
