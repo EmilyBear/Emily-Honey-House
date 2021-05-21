@@ -3,6 +3,10 @@
     opacity: 0.95
 }
 
+#article-container > :last-child {
+    margin-bottom: 40px;
+}
+
 /* 所有页面背景 */
 :root {
     opacity: 1;
@@ -19,6 +23,13 @@
     opacity: 0
 }
 
+/* 文章页标签优化 */
+
+#post .tag_share .post-meta__tags {
+    border: 1px solid #49b1f5;
+    color: #49b1f5;
+}
+
 /* 滚动条优化 */
 ::-webkit-scrollbar {
     width: 8px;
@@ -26,12 +37,12 @@
   }
   
   ::-webkit-scrollbar-track {
-    background-color: rgba(73, 177, 245, 0.2);
+    background-color: rgba(7, 75, 19, 0.2);
     border-radius: 2em;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #49b1f5;
+    background-color: #00c4b6;
     background-image: -webkit-linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.4) 25%,
