@@ -1,21 +1,56 @@
-/* 文章页背景 */
-.layout_post>#post {
-    opacity: 0.95
+/* 透明度 */
+#page-header {
+  background-color: #ffffff00;
+}
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item{
+  opacity: 0.9;
+}
+/* 首页侧栏卡片 */
+.card-widget{
+background:rgba(255, 255, 255, 0.8)!important;
+}
+/* 文章页面正文背景 */
+div#post{
+background: rgba(255, 255, 255, 0.9);
+}
+/* 分页页面 */
+div#page{
+background: rgba(255, 255, 255, 0.9);
+}
+/* 归档页面 */
+div#archive{
+background: rgba(255, 255, 255, 0.9);
+}
+/* 标签页面 */
+div#tag{
+background: rgba(255, 255, 255, 0.9);
+}
+/* 分类页面 */
+div#category{
+background: rgba(255, 255, 255, 0.9);
 }
 
-#article-container > :last-child {
-    margin-bottom: 40px;
-}
-
-/* 所有页面背景 */
-:root {
-    opacity: 1;
-}
-
-#aside-content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post, .layout > div:first-child {
-    opacity: 0.95;
-}
-
+[data-theme="dark"]
+  #aside-content .card-widget{
+      background: rgba(0, 0, 0, 0.7)!important;
+    }
+[data-theme="dark"]
+  div#post{
+    background: rgba(0, 0, 0, 0.7)!important;
+    }
+  div#page{
+    background: rgba(0, 0, 0, 0.7)!important;
+    }
+  div#archive{
+    background: rgba(0, 0, 0, 0.7)!important;
+    }
+  div#tag{
+    background: rgba(0, 0, 0, 0.7)!important;
+    }
+  div#category{
+    background: rgba(0, 0, 0, 0.7)!important;
+    }
 [data-theme='dark'] #web_bg:before, [data-theme='dark'] #footer:before {
     opacity: 0.3
 }
@@ -23,15 +58,22 @@
     opacity: 0
 }
 
-/* 文章页标签优化 */
-
-#post .tag_share .post-meta__tags {
-    border: 1px solid #49b1f5;
-    color: #49b1f5;
+/* 页脚透明 */
+#footer{
+  background: transparent!important;
 }
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"]
+  #footer::before{
+      background: transparent!important;
+    }
+[data-theme="dark"]
+  #page-header::before{
+    background: transparent!important;
+    }
 
-#article-container {
-    margin-bottom: 40px;
+.history_slide {
+  background: #12121200!important;
 }
 
 /* 滚动条优化 */
@@ -69,6 +111,7 @@
     background-color: #ec29f3;
   }
 
+/* Artitalk背景 */
 #operare_artitalk .at_button, #artitalk_main .at_button {
     background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0px 0px
   }
