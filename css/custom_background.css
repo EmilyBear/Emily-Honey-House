@@ -1,3 +1,8 @@
+/* 《仙剑奇侠传七》背景特供 */
+#nav a {
+  color: #314d60;
+}
+
 /* 透明度 */
 #page-header {
   background-color: #ffffff00;
@@ -78,6 +83,11 @@ background: rgba(255, 255, 255, 0.9);
 
 .history_slide {
   background: #12121200!important;
+}
+
+/* 导航子菜单半透明 */
+#nav .menus_items .menus_item .menus_item_child {
+  background-color: rgba(255,255,255,0.7);
 }
 
 /* 滚动条优化 */
