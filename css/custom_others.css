@@ -221,10 +221,13 @@ text-indent: 2em;
 #article-container .new-meta-box p{ text-indent: 0em !important; } 
 #article-container .note p{ text-indent: 0em !important; } 
 #article-container .tag p{ text-indent: 0em !important; }
+#article-container .timeline .timeline-item.headline .timeline-item-title .item-circle>p { text-indent: 0em; font-weight: 700; font-size: 1.2em; }
+#article-container .timeline .timeline-item .item-circle > p { font-weight: 600; text-indent: 0em; font-size: 0.8rem; }
 
 /*底部按钮*/
 #rightside > div > button, #rightside > div > a {
     margin-bottom: 4px;
+    border-radius: 12px;
 }
 button {
     border-radius: 12px;

@@ -2,6 +2,9 @@
 #page-header {
   background-color: #ffffff00;
   }
+#page-header:before {
+  opacity: 0
+}
 /* 首页文章卡片 */
 #recent-posts > .recent-post-item{
   opacity: 0.9;
