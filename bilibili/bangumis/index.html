@@ -60,7 +60,7 @@ gtag('config', 'UA-196570446-1');
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-12-04 01:59:47'
+  postUpdate: '2022-01-25 17:11:05'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -131,11 +131,26 @@ gtag('config', 'UA-196570446-1');
       }
       const t = saveToLocal.get('theme')
     
-          const now = new Date()
-          const hour = now.getHours()
-          const isNight = hour <= 6 || hour >= 18
-          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-          else if (t === 'light') activateLightMode()
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
           else activateDarkMode()
         
       const asideStatus = saveToLocal.get('aside-status')
@@ -154,7 +169,7 @@ gtag('config', 'UA-196570446-1');
     }
     detectApple()
     })(window)</script><link rel="stylesheet" href="/css/custom_background.css"><link rel="stylesheet" href="/css/custom_others.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="艾米莉的蜂蜜屋" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-file-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/galleries/"><i class="fa-fw far fa-images"></i><span> 图集</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-pencil-alt"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-ellipsis-v"></i><span> 记录</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/mblogs/"><i class="fa-fw fas fa-comment-dots"></i><span> 闲言碎语</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视记录</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 图书记录</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏记录</span></a></li><li><a class="site-page child" href="/musics/"><i class="fa-fw fas fa-music"></i><span> 音乐收集</span></a></li><li><a class="site-page child" href="/bilibili/bangumis/"><i class="fa-fw iconfont icon-bilibili"></i><span> 关注的动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-ellipsis-v"></i><span> 更多</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://cloud.emiliabear.com/"><i class="fa-fw fas fa-folder-minus"></i><span> 文件仓库</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://share.emiliabear.com/"><i class="fa-fw fas fa-folder-open"></i><span> 资源目录</span></a></li><li><a class="site-page child" href="/changelog/"><i class="fa-fw fas fa-wrench"></i><span> 更新记录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://emilybear.instatus.com/"><i class="fa-fw iconfont icon-xingqiudiqiu"></i><span> 站点状态</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/source/_data/images/bg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">艾米莉的蜂蜜屋</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-file-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/galleries/"><i class="fa-fw far fa-images"></i><span> 图集</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-pencil-alt"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-ellipsis-v"></i><span> 记录</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/mblogs/"><i class="fa-fw fas fa-comment-dots"></i><span> 闲言碎语</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视记录</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book-open"></i><span> 图书记录</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏记录</span></a></li><li><a class="site-page child" href="/musics/"><i class="fa-fw fas fa-music"></i><span> 音乐收集</span></a></li><li><a class="site-page child" href="/bilibili/bangumis/"><i class="fa-fw iconfont icon-bilibili"></i><span> 关注的动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-ellipsis-v"></i><span> 更多</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://cloud.emiliabear.com/"><i class="fa-fw fas fa-folder-minus"></i><span> 文件仓库</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://share.emiliabear.com/"><i class="fa-fw fas fa-folder-open"></i><span> 资源目录</span></a></li><li><a class="site-page child" href="/changelog/"><i class="fa-fw fas fa-wrench"></i><span> 更新记录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://emilybear.instatus.com/"><i class="fa-fw iconfont icon-xingqiudiqiu"></i><span> 站点状态</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">bilibili 动画关注列表</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-file-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/galleries/"><i class="fa-fw far fa-images"></i><span> 图集</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-pencil-alt"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-ellipsis-v"></i><span> 更多</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://cloud.emiliabear.com/"><i class="fa-fw fas fa-folder-minus"></i><span> 文件仓库</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://share.emiliabear.com/"><i class="fa-fw fas fa-folder-open"></i><span> 资源目录</span></a></li><li><a class="site-page child" href="/changelog/"><i class="fa-fw fas fa-wrench"></i><span> 更新记录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://emilybear.instatus.com/"><i class="fa-fw iconfont icon-xingqiudiqiu"></i><span> 站点状态</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/source/_data/images/bg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">艾米莉的蜂蜜屋</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-file-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/galleries/"><i class="fa-fw far fa-images"></i><span> 图集</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-pencil-alt"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-ellipsis-v"></i><span> 更多</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://cloud.emiliabear.com/"><i class="fa-fw fas fa-folder-minus"></i><span> 文件仓库</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://share.emiliabear.com/"><i class="fa-fw fas fa-folder-open"></i><span> 资源目录</span></a></li><li><a class="site-page child" href="/changelog/"><i class="fa-fw fas fa-wrench"></i><span> 更新记录</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://emilybear.instatus.com/"><i class="fa-fw iconfont icon-xingqiudiqiu"></i><span> 站点状态</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">bilibili 动画关注列表</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container">
 <blockquote>
     <p>仅包含 bilibili 上有的动画，动画记录主要保存在 Bangumi</p>
 </blockquote>
@@ -171,7 +186,7 @@ gtag('config', 'UA-196570446-1');
         (8)</a>
     <a class="bangumi-tab" id="bangumi-tab3" href="javascript:;" rel="external" target="_self" onclick="return false">
         已看
-        (46)</a>
+        (48)</a>
 </div>
 <div>
     <div id="bangumi-item1">
@@ -187,17 +202,17 @@ gtag('config', 'UA-196570446-1');
     <div id="bangumi-item2">
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/94ceb5231d26f2f216e5546c597ea8c508f91849.png@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
+    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/image/1c2da69182b35a090abcabe7e93bcea15a725f6e.png@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
-            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28231306/">Re：从零开始的异世界生活 新编集版</a>
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28236379/">明日同學的水手服（僅限港澳台地區）</a>
         </div>
         <div class="bangumi-meta">
             <span class="bangumi-info-items" >
                 <span class="bangumi-info-item">
                 
-                <span class="bangumi-info-total">全13话</span><em
+                <span class="bangumi-info-total">未完结</span><em
                         class="bangumi-info-label-em">0</em>
                 </span>
                 
@@ -207,23 +222,75 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>-</em>
+                    <span class="bangumi-info-label">总播放</span> <em>9.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>505</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>2.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>2</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>1687</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>-</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3515</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>暂无评分</em>
                 </span>
             </span>
         </div>
-        <div class="bangumi-comments" ><p>简介：2016年播出的TV动画《Re:从零开始的异世界生活》决定重新作为1小时节目播出！《Re:0开始的异世界生活》将于2020年1月1日（周三）起在AT-X、TOKYO MX、BS11等频道播出，追加新剪...</p> </div>
+        <div class="bangumi-comments" ><p>简介：舞臺位於鄉下的名門女子初級中學——私立蠟梅學園。
+有一位名叫明日小路的少女，夢想著能夠穿上這所學園的水手服。
+因為某個契機，她實現了這一夢想，於是在緊張中迎來了開學典禮的日子——
+「我要穿水手服」
+懷...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/image/d0341cf9f73f05fd2e17eac976113a1a23e35557.png@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28234142/">燒窯的話也要馬克杯（僅限港澳台地區）</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全12话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>2.6 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>4445</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>333</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>204</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>暂无评分</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：陶藝，很土氣嗎？
+
+豐川姬乃和開始自謀職業的父親一起搬家到
+在她小時候就去世的母親的故鄉，岐阜縣多治見市。
+開始在母親的母校就讀的姬乃，在同班同學久久梨三華的邀請下
+一起去了某個地方。
+她們的目的地是...</p> </div>
     </div>
 </div>
 
@@ -249,16 +316,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>208.5 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>482.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>577.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>580.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>12.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>18.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>6390</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>7791</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>暂无评分</em>
@@ -291,16 +358,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>226.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>563.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>578.8 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>584.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>4.6 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>6.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>1.5 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>1.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>暂无评分</em>
@@ -333,16 +400,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>48.4 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>90.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>249.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>249.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>2.4 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>3.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>3798</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>4434</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>暂无评分</em>
@@ -350,48 +417,6 @@ gtag('config', 'UA-196570446-1');
             </span>
         </div>
         <div class="bangumi-comments" ><p>简介：飞贼风铃儿与商贾之女白钰袖一同结伴闯荡江湖，殊不知在她们的背后正孕育着一场巨大的阴谋。...</p> </div>
-    </div>
-</div>
-
-        
-        <div class="bangumi-item">
-    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/image/90b51647c381091984dc0664c05ed988c66eb13a.jpg@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
-    </div>
-    <div class="bangumi-info">
-        <div class="bangumi-title">
-            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28230742/">时光代理人</a>
-        </div>
-        <div class="bangumi-meta">
-            <span class="bangumi-info-items" >
-                <span class="bangumi-info-item">
-                
-                <span class="bangumi-info-total">全11话</span><em
-                        class="bangumi-info-label-em">0</em>
-                </span>
-                
-                
-                <span class="bangumi-info-item bangumi-area">
-                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
-                </span>
-                
-                <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>1.8 亿</em>
-                </span>
-                <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>579.1 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>242.5 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>232.7 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>9.8</em>
-                </span>
-            </span>
-        </div>
-        <div class="bangumi-comments" ><p>简介：在繁华都市的某个角落，有一家叫做“时光照相馆”的小店还在照常营业。虽然门庭冷落，但它背后其实由两个具有特殊能力的男人——程小时和陆光经营着。为了完成顾客的委托，陆光和程小时组队配合使用超能力进入照片，...</p> </div>
     </div>
 </div>
 
@@ -417,16 +442,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>135.6 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>219.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>250.6 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>249.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>4432</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>5919</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>2815</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3874</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -459,16 +484,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>937.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>962.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>64.3 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>65.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>2.2 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>2.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>17.0 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>17.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -504,13 +529,13 @@ gtag('config', 'UA-196570446-1');
                     <span class="bangumi-info-label">总播放</span> <em>7.2 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>632.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>634.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>229.1 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>230.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>1018.6 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>1020.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -533,6 +558,132 @@ gtag('config', 'UA-196570446-1');
     <div id="bangumi-item3">
         
         <div class="bangumi-item">
+    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/image/f43cd147ebb5dacc1c38e5eb7a266276c58292b4.png@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md7312/">中国古诗词动漫</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">未完结</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>3366.1 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>239.5 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>91.1 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>38.8 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>9.9</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：【不定时更新】“中国唱诗班”系列动画由中共嘉定区委宣传部投资出品，已列为嘉定800年重点项目之一。这批动画完全由中国青年团队独立原创手绘，在故事、场景、人物、服饰方面都根据历史文献，进行反复考证修改，...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/image/3c125e1aad08643e3eff2fb7d45e740c1a052725.png@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28224394/">Re：从零开始的异世界生活 新编集版</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全13话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>6998.1 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>616.2 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>44.7 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>156.3 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>9.6</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：在从便利商店回家的路上，突然被异世界召唤的少年菜月昴。在无法依靠任何东西的异世界，无力的少年手唯一的力量……那是“死去然后重新开始”的力量。为了守护最重要的人们，为了取回确实存在着又无可替代的时间，少...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/image/90b51647c381091984dc0664c05ed988c66eb13a.jpg@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28230742/">时光代理人</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全11话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>1.9 亿</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>602.6 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>250.2 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>239.5 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>9.8</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：在繁华都市的某个角落，有一家叫做“时光照相馆”的小店还在照常营业。虽然门庭冷落，但它背后其实由两个具有特殊能力的男人——程小时和陆光经营着。为了完成顾客的委托，陆光和程小时组队配合使用超能力进入照片，...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
     <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/image/876cf03d3460f02e428b2982fa7d0d8af96ecbb3.jpg@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
     </div>
     <div class="bangumi-info">
@@ -553,16 +704,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>493.1 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>532.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>37.3 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>37.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>1.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>2.6 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>2.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>7.2</em>
@@ -596,16 +747,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>3541.9 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>3809.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>76.5 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>78.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>13.3 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>14.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>122.5 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>125.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.9</em>
@@ -638,16 +789,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>137.0 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>142.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>84.5 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>84.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>1.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>5719</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>5875</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -680,16 +831,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>1.9 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>972</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>1095</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>198</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>216</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>8</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>10</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>暂无评分</em>
@@ -722,19 +873,19 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>9.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>9.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>4917</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>5120</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>1411</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>492</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>853</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>598</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>9.3</em>
+                    <span class="bangumi-info-label">评分</span> <em>9.2</em>
                 </span>
             </span>
         </div>
@@ -764,16 +915,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>17.2 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>17.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
                     <span class="bangumi-info-label">追番人数</span> <em>30.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>3072</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>3139</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>3291</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3357</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -807,7 +958,7 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>217.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>218.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
                     <span class="bangumi-info-label">追番人数</span> <em>33.7 万</em>
@@ -855,16 +1006,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>2195.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2282.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>129.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>132.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>30.5 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>31.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>22.8 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>23.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.9</em>
@@ -898,13 +1049,13 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>89.0 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>93.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>10.6 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>10.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>3.2 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>3.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
                     <span class="bangumi-info-label">弹幕总数</span> <em>2.3 万</em>
@@ -941,16 +1092,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>3398.1 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>3571.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>197.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>202.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>14.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>16.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>193.2 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>194.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -983,16 +1134,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>5783.1 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>5919.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>247.9 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>250.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>127.8 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>129.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>76.2 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>76.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -1025,16 +1176,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>7002.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>7262.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>316.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>324.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>80.7 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>83.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>99.3 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>101.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -1070,10 +1221,10 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>2489</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2534</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>1476</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>1517</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>63</em>
@@ -1113,16 +1264,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>2526.9 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2700.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>139.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>143.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>26.8 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>30.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>95.5 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>98.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.9</em>
@@ -1158,13 +1309,13 @@ gtag('config', 'UA-196570446-1');
                     <span class="bangumi-info-label">总播放</span> <em>1.3 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>575.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>582.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>908.6 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>918.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>144.1 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>145.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -1198,16 +1349,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>292.0 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>316.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>125.0 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>125.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>8.4 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>8.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>5.2 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>5.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.6</em>
@@ -1243,7 +1394,7 @@ gtag('config', 'UA-196570446-1');
                     <span class="bangumi-info-label">总播放</span> <em>78.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>19.1 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>19.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>4.5 万</em>
@@ -1285,10 +1436,10 @@ gtag('config', 'UA-196570446-1');
                     <span class="bangumi-info-label">总播放</span> <em>127.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>23.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>23.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>4796</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>4989</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
                     <span class="bangumi-info-label">弹幕总数</span> <em>2.3 万</em>
@@ -1324,16 +1475,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>440.4 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>446.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>46.5 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>46.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>5.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>10.5 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>10.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -1368,16 +1519,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>391.0 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>409.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>51.8 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>52.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>7.2 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>2.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>14.1 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>14.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -1410,16 +1561,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>472.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>498.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>56.5 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>57.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>1.6 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>1.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>13.1 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>13.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -1452,16 +1603,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>242.1 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>255.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>18.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>18.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>7166</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>7693</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>6.9 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>7.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.6</em>
@@ -1497,16 +1648,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>287.8 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>304.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>27.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>28.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>7667</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>8166</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>6.3 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>6.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -1541,13 +1692,13 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>128.8 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>129.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>19.3 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>19.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>8378</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>8418</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
                     <span class="bangumi-info-label">弹幕总数</span> <em>1.5 万</em>
@@ -1587,13 +1738,13 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>352.5 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>357.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>91.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>91.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>1.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>2.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
                     <span class="bangumi-info-label">弹幕总数</span> <em>7.2 万</em>
@@ -1631,16 +1782,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>13.7 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>14.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
                     <span class="bangumi-info-label">追番人数</span> <em>5.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>1935</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>2001</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>2951</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3021</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -1673,16 +1824,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>3.1 亿</em>
+                    <span class="bangumi-info-label">总播放</span> <em>3.2 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>756.6 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>766.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>99.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>102.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>568.2 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>564.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -1718,19 +1869,19 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>349.5 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>370.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>5.8 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>5.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>6.3 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>3.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>7.2 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>9.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>9</em>
+                    <span class="bangumi-info-label">评分</span> <em>8.9</em>
                 </span>
             </span>
         </div>
@@ -1760,16 +1911,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>256.6 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>263.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>10.0 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>10.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>5953</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>6122</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>3.7 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -1802,16 +1953,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>256.6 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>263.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>6.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>6.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>5953</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>6122</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>3.7 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -1844,16 +1995,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>256.6 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>263.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>7.1 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>7.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>5953</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>6122</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>3.7 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -1886,19 +2037,19 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>256.6 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>263.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>20.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>20.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>5953</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>6122</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>3.7 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>3.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>9.4</em>
+                    <span class="bangumi-info-label">评分</span> <em>9.5</em>
                 </span>
             </span>
         </div>
@@ -1928,10 +2079,10 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>371.5 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>376.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>33.1 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>33.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>3.2 万</em>
@@ -1972,16 +2123,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>6306.9 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>6508.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>254.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>256.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>45.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>47.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>18.0 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>18.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.6</em>
@@ -2014,13 +2165,13 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>504.0 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>512.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>4.8 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>4.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>1990</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>2024</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
                     <span class="bangumi-info-label">弹幕总数</span> <em>1.9 万</em>
@@ -2031,48 +2182,6 @@ gtag('config', 'UA-196570446-1');
             </span>
         </div>
         <div class="bangumi-comments" ><p>简介：这里有最架空的斗气大陆、最无语的儿女情长、最劲爆的明星隐私、最浆糊的恩怨情仇。斗破唱囧Q版真人秀节目，为你揭露斗破苍穹的台前幕后。...</p> </div>
-    </div>
-</div>
-
-        
-        <div class="bangumi-item">
-    <div class="bangumi-picture"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif" data-src="https://i0.hdslb.com/bfs/bangumi/dc1fd7a5ae14aefff4e1b01fc9751ebcacccc4cf.jpg@220w_280h.webp" referrerPolicy="no-referrer" width="110"/>
-    </div>
-    <div class="bangumi-info">
-        <div class="bangumi-title">
-            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md7312/">中国唱诗班</a>
-        </div>
-        <div class="bangumi-meta">
-            <span class="bangumi-info-items" >
-                <span class="bangumi-info-item">
-                
-                <span class="bangumi-info-total">未完结</span><em
-                        class="bangumi-info-label-em">0</em>
-                </span>
-                
-                
-                <span class="bangumi-info-item bangumi-area">
-                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
-                </span>
-                
-                <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>2866.1 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>213.0 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>72.7 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>35.8 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>9.9</em>
-                </span>
-            </span>
-        </div>
-        <div class="bangumi-comments" ><p>简介：【不定时更新，“更新至”看季度短标题】“中国唱诗班”系列动画由中共嘉定区委宣传部投资出品，已列为嘉定800年重点项目之一。这批动画完全由中国青年团队独立原创手绘，在故事、场景、人物、服饰方面都根据历史...</p> </div>
     </div>
 </div>
 
@@ -2101,13 +2210,13 @@ gtag('config', 'UA-196570446-1');
                     <span class="bangumi-info-label">总播放</span> <em>1.4 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>475.1 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>477.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>61.1 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>61.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>366.4 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>367.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.4</em>
@@ -2141,16 +2250,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>5603.8 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>5747.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>100.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>101.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>21.5 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>22.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>4.3 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>5.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.4</em>
@@ -2183,19 +2292,19 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>2477.3 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2577.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>277.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>286.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>22.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>24.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>69.9 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>70.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>9.5</em>
+                    <span class="bangumi-info-label">评分</span> <em>9.6</em>
                 </span>
             </span>
         </div>
@@ -2228,13 +2337,13 @@ gtag('config', 'UA-196570446-1');
                     <span class="bangumi-info-label">总播放</span> <em>1.7 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>466.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>471.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>42.8 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>43.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>609.8 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>610.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.3</em>
@@ -2268,16 +2377,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>1.8 亿</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2.0 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>250.4 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>258.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>47.8 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>50.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>195.9 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>199.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.9</em>
@@ -2310,16 +2419,16 @@ gtag('config', 'UA-196570446-1');
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>1202.9 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>1362.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>24.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>25.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>21.4 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>3.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>26.6 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>21.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -2517,15 +2626,15 @@ var c=this.id.replace("tab","item"),d=document.getElementById(c);d.classList.rem
 var size=pagenums[i].parentNode.siblings().length;pagenums[i].innerText="1 / "+(0===Math.ceil(size/10)?1:Math.ceil(size/10)),firstpages[i].click()}
 
 </script>
-</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Waline</span><span class="switch-btn"></span><span class="second-comment">Disqusjs</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">EmilyBear</div><div class="author-info__description">小熊们和艾米莉辛勤建设的小小乐园</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="/feed.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a><a class="social-icon" href="mailto:akkariin@emiliabear.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://t.me/s/gamelollipop" target="_blank" title="Telegram 频道"><i class="fab fa-telegram-plane"></i></a><a class="social-icon" href="https://twitter.com/Emilia_Bear" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://steamcommunity.com/id/emilybear/" target="_blank" title="Steam"><i class="fab fa-steam"></i></a><a class="social-icon" href="https://bgm.tv/user/422132" target="_blank" title="Bangumi"><i class="iconfont icon-bangumi"></i></a><a class="social-icon" href="https://www.last.fm/user/BetisRooney" target="_blank" title="Last.fm"><i class="fab fa-lastfm-square"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">站点正在建设中，欢迎常来访问~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blogs/39/" title="《仙剑奇侠传七》剧情短评">《仙剑奇侠传七》剧情短评</a><time datetime="2021-11-23T11:47:16.000Z" title="发表于 2021-11-23 19:47:16">2021-11-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blogs/37/" title="谨防“元宇宙”资本概念炒作骗局">谨防“元宇宙”资本概念炒作骗局</a><time datetime="2021-11-20T04:12:00.000Z" title="发表于 2021-11-20 12:12:00">2021-11-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blogs/38/" title="徐崇温与杜章智、王雨辰就西方马克思主义概念和理论定位的研究综述">徐崇温与杜章智、王雨辰就西方马克思主义概念和理论定位的研究综述</a><time datetime="2021-11-05T13:31:34.000Z" title="发表于 2021-11-05 21:31:34">2021-11-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blogs/36/" title="关于我帮助室友重装系统并意外恢复了2G内存这件事">关于我帮助室友重装系统并意外恢复了2G内存这件事</a><time datetime="2021-10-30T02:50:30.000Z" title="发表于 2021-10-30 10:50:30">2021-10-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/blogs/32/" title="《社会主义从空想到科学的发展》中的精彩论述">《社会主义从空想到科学的发展》中的精彩论述</a><time datetime="2021-09-23T01:45:00.000Z" title="发表于 2021-09-23 09:45:00">2021-09-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Waline</span><span class="switch-btn"></span><span class="second-comment">Disqusjs</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">EmilyBear</div><div class="author-info__description">小熊们和艾米莉辛勤建设的小小乐园</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="/feed.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a><a class="social-icon" href="mailto:akkariin@emiliabear.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://t.me/s/gamelollipop" target="_blank" title="Telegram 频道"><i class="fab fa-telegram-plane"></i></a><a class="social-icon" href="https://twitter.com/Emilia_Bear" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://wxw.moe/@emilybear" target="_blank" title="呜呜 wxw.moe"><i class="fab fa-mastodon"></i></a><a class="social-icon" href="https://steamcommunity.com/id/emilybear/" target="_blank" title="Steam"><i class="fab fa-steam"></i></a><a class="social-icon" href="https://bgm.tv/user/422132" target="_blank" title="Bangumi"><i class="iconfont icon-bangumi"></i></a><a class="social-icon" href="https://www.last.fm/user/BetisRooney" target="_blank" title="Last.fm"><i class="fab fa-lastfm-square"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">站点正在建设中，欢迎常来访问~</div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8A%A8%E7%94%BB/"><span class="card-category-list-name">动画</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8A%A8%E7%94%BB/%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99/"><span class="card-category-list-name">历史资料</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%9C%B0%E6%96%B9%E8%B5%84%E6%96%99/"><span class="card-category-list-name">地方资料</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%96%87%E7%AB%A0/"><span class="card-category-list-name">学术文章</span><span class="card-category-list-count">5</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%96%87%E7%AB%A0/%E5%93%B2%E5%AD%A6/"><span class="card-category-list-name">哲学</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E6%83%B3/"><span class="card-category-list-name">日常随想</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">电子游戏</span><span class="card-category-list-count">11</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99/"><span class="card-category-list-name">历史资料</span><span class="card-category-list-count">10</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99/%E6%8A%A5%E5%88%8A%E6%9D%82%E5%BF%97/"><span class="card-category-list-name">报刊杂志</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99/%E7%BD%91%E7%BB%9C%E8%B5%84%E6%96%99/"><span class="card-category-list-name">网络资料</span><span class="card-category-list-count">6</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%96%99/"><span class="card-category-list-name">数据资料</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AB%99%E7%82%B9%E6%96%87%E6%A1%A3/"><span class="card-category-list-name">站点文档</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%B6%B3%E7%90%83%E8%BF%90%E5%8A%A8/"><span class="card-category-list-name">足球运动</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%B6%B3%E7%90%83%E8%BF%90%E5%8A%A8/%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99/"><span class="card-category-list-name">历史资料</span><span class="card-category-list-count">1</span></a></li></ul></li>
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8A%A8%E7%94%BB/"><span class="card-category-list-name">动画</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%9C%B0%E6%96%B9%E8%B5%84%E6%96%99/"><span class="card-category-list-name">地方资料</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%96%87%E7%AB%A0/"><span class="card-category-list-name">学术文章</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E6%83%B3/"><span class="card-category-list-name">日常随想</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">电子游戏</span><span class="card-category-list-count">11</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E5%8E%86%E5%8F%B2%E8%B5%84%E6%96%99/"><span class="card-category-list-name">历史资料</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%96%99/"><span class="card-category-list-name">数据资料</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AB%99%E7%82%B9%E6%96%87%E6%A1%A3/"><span class="card-category-list-name">站点文档</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%B6%B3%E7%90%83%E8%BF%90%E5%8A%A8/"><span class="card-category-list-name">足球运动</span><span class="card-category-list-count">1</span></a></li>
             </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">2021年11月</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">2021年10月</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">2021年09月</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">2021年08月</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">2021年07月</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">2021年06月</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">43</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">316.1k</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-12-03T17:59:47.106Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2016 - 2021 By EmilyBear</div><div class="footer_custom_text"><div id="time"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>var now = new Date();function createtime() {var grt= new Date("02/16/2016 12:01:00");now.setTime(now.getTime()+250);days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}document.getElementById("timeDate").innerHTML = "小站在 Github 服务器上托管了 "+dnum+" 天 ";document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";}setInterval("createtime()",250);</script></div> 除特别声明外，站点内容遵循 署名-非商业性使用 4.0 (CC BY-NC 4.0) 协议</br><script type="text/javascript" src="//rf.revolvermaps.com/0/0/9.js?i=5iyi7bs7biu&amp;t=%E7%A8%BB%E8%8A%B1%E9%A6%99%E9%87%8C%E8%AF%B4%E4%B8%B0%E5%B9%B4%E3%80%82%E5%90%AC%E5%8F%96%E8%9B%99%E5%A3%B0%E4%B8%80%E7%89%87%E3%80%82" async="async"> | </script><a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20210062" target="_blank"> 20210062号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">2022年01月</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">2021年11月</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">2021年10月</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">2021年09月</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">2021年08月</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">2021年07月</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">46</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">338.5k</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-01-25T09:11:05.368Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2016 - 2022 By EmilyBear</div><div class="footer_custom_text"><div id="time"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>var now = new Date();function createtime() {var grt= new Date("02/16/2016 12:01:00");now.setTime(now.getTime()+250);days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}document.getElementById("timeDate").innerHTML = "小站在 Github 服务器上托管了 "+dnum+" 天 ";document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";}setInterval("createtime()",250);</script></div> 除特别声明外，站点内容遵循 署名-非商业性使用 4.0 (CC BY-NC 4.0) 协议</br><script type="text/javascript" src="//rf.revolvermaps.com/0/0/9.js?i=5iyi7bs7biu&amp;t=%E7%A8%BB%E8%8A%B1%E9%A6%99%E9%87%8C%E8%AF%B4%E4%B8%B0%E5%B9%B4%E3%80%82%E5%90%AC%E5%8F%96%E8%9B%99%E5%A3%B0%E4%B8%80%E7%89%87%E3%80%82" async="async"> | </script><a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20210062" target="_blank"> 20210062号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')

@@ -1,3 +1,34 @@
+/* 自定义字体 */
+
+/*@font-face {
+    font-family: 'Noto Serif SC', sans-serif;
+    src:url('https://fonts.loli.net/css2?family=Noto+Serif+SC');
+}    
+@font-face {
+    font-family: 'Noto Sans SC', sans-serif;
+    src:url('https://fonts.loli.net/css2?family=Noto+Sans+SC');
+}*/
+
+#article-container p, #article-container li {
+    font-family: 'Noto Serif SC', sans-serif;
+    font-size: 16px;
+    font-display: swap;
+    line-height: 1.8
+}
+
+#post-info {
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: bold !important;
+    font-display : swap;
+}
+
+#article-container.post-content h1, #article-container.post-content h2, #article-container.post-content h3, #article-container.post-content h4, #article-container.post-content h5, #article-container.post-content h6 {
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: bold !important;
+    font-display: swap;
+}
+
+/* 图标样式 */
 @font-face {
   font-family: "iconfont"; /* Project id 2554028 */
   src: url('//at.alicdn.com/t/font_2554028_79lgzwl8dl4.eot?t=1630145766528'); /* IE9 */
@@ -176,4 +207,25 @@
     margin-left: -0.9rem;
     font-size: 0.66rem;
     margin-top: 0.0rem;
+}
+
+/*首行缩进2字符*/
+#article-container
+p{
+text-indent: 2em;
+}
+#article-container detail p{ text-indent: 0em !important; }
+#article-container blockquote p{ text-indent: 0em !important; }
+#article-container section p{ text-indent: 0em !important; }
+#article-container .prev-next p{ text-indent: 0em !important; } 
+#article-container .new-meta-box p{ text-indent: 0em !important; } 
+#article-container .note p{ text-indent: 0em !important; } 
+#article-container .tag p{ text-indent: 0em !important; }
+
+/*底部按钮*/
+#rightside > div > button, #rightside > div > a {
+    margin-bottom: 4px;
+}
+button {
+    border-radius: 12px;
 }
