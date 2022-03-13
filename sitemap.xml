@@ -4,16 +4,16 @@
   <url>
     <loc>https://www.emiliabear.com/manifest.json</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/mblogs/</loc>
+    <loc>https://www.emiliabear.com/musics</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,34 +22,34 @@
   <url>
     <loc>https://www.emiliabear.com/messageboard/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/musics/</loc>
+    <loc>https://www.emiliabear.com/gamedb/</loc>
     
-    <lastmod>2022-01-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/about/</loc>
-    
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/changelog/</loc>
+    <loc>https://www.emiliabear.com/about</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/changelog</loc>
+    
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +58,7 @@
   <url>
     <loc>https://www.emiliabear.com/galleries/guilin/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +67,7 @@
   <url>
     <loc>https://www.emiliabear.com/galleries/jianzheng05/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +76,7 @@
   <url>
     <loc>https://www.emiliabear.com/galleries/jianzheng15/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +85,7 @@
   <url>
     <loc>https://www.emiliabear.com/galleries/jianzheng62/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,25 +94,16 @@
   <url>
     <loc>https://www.emiliabear.com/galleries/realbetis1907-1930/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/23/</loc>
+    <loc>https://www.emiliabear.com/blogs/42/</loc>
     
-    <lastmod>2022-01-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/blogs/35/</loc>
-    
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,16 +112,16 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/36/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/32/</loc>
+    <loc>https://www.emiliabear.com/blogs/marxism01/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -139,7 +130,7 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/31/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -148,7 +139,16 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/30/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/marxism21/</loc>
+    
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -157,25 +157,25 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/22/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/29/</loc>
+    <loc>https://www.emiliabear.com/blogs/marxism06/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/27/</loc>
+    <loc>https://www.emiliabear.com/blogs/marxism05/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -184,34 +184,34 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/25/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/26/</loc>
+    <loc>https://www.emiliabear.com/blogs/marxism07/</loc>
     
-    <lastmod>2022-01-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/blogs/28/</loc>
-    
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/24/</loc>
+    <loc>https://www.emiliabear.com/blogs/marxism02/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/marxism03/</loc>
+    
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -220,16 +220,25 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/18/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/10/</loc>
+    <loc>https://www.emiliabear.com/blogs/25/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/24/</loc>
+    
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -238,16 +247,16 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/41/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/7/</loc>
+    <loc>https://www.emiliabear.com/blogs/35/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -256,7 +265,7 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/1/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -265,7 +274,25 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/4/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/10/</loc>
+    
+    <lastmod>2022-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/7/</loc>
+    
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -274,7 +301,7 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/3/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -283,7 +310,7 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/2/</loc>
     
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -443,6 +470,15 @@
   </url>
   
   <url>
+    <loc>https://www.emiliabear.com/blogs/19/</loc>
+    
+    <lastmod>2019-04-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.emiliabear.com/blogs/vg2/</loc>
     
     <lastmod>2019-01-05</lastmod>
@@ -452,7 +488,16 @@
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/donghua01/</loc>
+    <loc>https://www.emiliabear.com/blogs/28/</loc>
+    
+    <lastmod>2018-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/donghua02/</loc>
     
     <lastmod>2007-11-06</lastmod>
     
@@ -463,7 +508,7 @@
 
   <url>
     <loc>https://www.emiliabear.com/</loc>
-    <lastmod>2022-01-25</lastmod>
+    <lastmod>2022-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
