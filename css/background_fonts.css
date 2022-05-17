@@ -1,40 +1,28 @@
 /* 自定义字体 */
 
 @import url('https://fonts.loli.net/css2?family=ABeeZee:ital@0;1&family=Emilys+Candy&family=Noto+Sans+SC:wght@500;700;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap%27');
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Serif SC', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', serif;
-    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Serif SC', Lato, Roboto, 'Microsoft YaHei', 'PingFang SC', serif;
+    font-weight: 500;
 }
-
 #page-header #site-title {
-    font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', Lato, Roboto, 'Microsoft YaHei', 'PingFang SC', sans-serif;
 }
-
 #article-container p, #article-container li {
     font-size: 18px;
     line-height: 1.8;
-    font-weight: 700;
-}
-
+    font-weight: 500;}
 #post-info {
     font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    font-weight: bold !important;
-}
-
+    font-weight: bold !important;}
 #article-container.post-content h1, #article-container.post-content h2, #article-container.post-content h3, #article-container.post-content h4, #article-container.post-content h5, #article-container.post-content h6, #recent-posts > .recent-post-item >.recent-post-info > .article-title {
-    font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'Microsoft YaHei', 'PingFang SC', sans-serif;
     font-weight: bold !important;
-    font-display: swap;
-}
-
+    font-display: swap;}
 #article-container pre, #article-container code { font-weight: 400; }
 .article-sort-item-title { font-size: 1.2em; }
-.article-sort-title { font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 1.75em; }
-
-.archive {
-    font-weight: 700;
-}
+.article-sort-title { font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', Lato, Roboto, 'Microsoft YaHei', 'PingFang SC', sans-serif; font-size: 1.75em; }
+.archive { font-weight: 700;}
 
 /* 透明度 */
 #page-header {
@@ -48,52 +36,39 @@ body {
   opacity: 0.9;
   }
 /* 首页侧栏卡片 */
-#aside-content .card-widget{
-background:rgba(255, 255, 255, 0.8);
+#aside-content .card-widget{background:rgba(255, 255, 255, 0.8);
   }
 /* 文章页面正文背景 */
-div#post{
-background: rgba(255, 255, 255, 0.9);
+div#post{background: rgba(255, 255, 255, 0.9);
   }
 /* 分页页面 */
-div#page{
-background: rgba(255, 255, 255, 0.9);
+div#page{background: rgba(255, 255, 255, 0.9);
   }
 /* 归档页面 */
-div#archive{
-background: rgba(255, 255, 255, 0.9);
+div#archive{background: rgba(255, 255, 255, 0.9);
   }
 /* 标签页面 */
-div#tag{
-background: rgba(255, 255, 255, 0.9);
+div#tag{background: rgba(255, 255, 255, 0.9);
   }
 /* 分类页面 */
-div#category{
-background: rgba(255, 255, 255, 0.9);
+div#category{background: rgba(255, 255, 255, 0.9);
   }
-
-[data-theme="dark"]
-  #aside-content .card-widget{
-      background: rgba(0, 0, 0, 0.8);
+[data-theme="dark"]  #aside-content .card-widget{
+        background: rgba(0, 0, 0, 0.8);
     }
-[data-theme="dark"]
-  div#post{
+[data-theme="dark"]  div#post{
     background: rgba(0, 0, 0, 0.8);
     }
-[data-theme="dark"]
-  div#page{
+[data-theme="dark"]  div#page{
     background: rgba(0, 0, 0, 0.8);
     }
-[data-theme="dark"] 
-  div#archive{
+[data-theme="dark"]  div#archive{
     background: rgba(0, 0, 0, 0.8);
     }
-[data-theme="dark"]
-  div#tag{
+[data-theme="dark"]  div#tag{
     background: rgba(0, 0, 0, 0.8);
     }
-[data-theme="dark"]
-  div#category{
+[data-theme="dark"]  div#category{
     background: rgba(0, 0, 0, 0.8);
     }
 [data-theme='dark'] #web_bg:before, [data-theme='dark'] #footer:before {
@@ -108,39 +83,29 @@ background: rgba(255, 255, 255, 0.9);
   background: transparent!important;
 }
 /*夜间模式伪类遮罩层透明*/
-[data-theme="dark"]
-  #footer::before{
-      background: transparent!important;
-    }
-[data-theme="dark"]
-  #page-header::before{
+[data-theme="dark"]  #footer::before{
+      background: transparent!important;}
+[data-theme="dark"]  #page-header::before{
     background: transparent!important;
     }
-
 .history_slide {
-  background: #12121200!important;
-}
+    background: #12121200!important;}
 
 /* 导航子菜单半透明 */
 #nav .menus_items .menus_item .menus_item_child {
-  background-color: rgba(255,255,255,0.7);
-}
-[data-theme="dark"]
-#nav .menus_items .menus_item .menus_item_child {
-  background-color: rgba(18,18,18,0.7);
-}
+  background-color: rgba(255,255,255,0.7);}
+[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child {
+  background-color: rgba(18,18,18,0.7);}
 
 /* 滚动条优化 */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
-  
   ::-webkit-scrollbar-track {
     background-color: rgba(7, 75, 19, 0.2);
     border-radius: 2em;
   }
-  
   ::-webkit-scrollbar-thumb {
     background-color: #00c4b6;
     background-image: -webkit-linear-gradient(
@@ -155,21 +120,10 @@ background: rgba(255, 255, 255, 0.9);
     );
     border-radius: 2em;
   }
-  
   ::-webkit-scrollbar-corner {
     background-color: transparent;
   }
-  
   ::-moz-selection {
     color: #fff;
     background-color: #ec29f3;
-  }
-
-/* Artitalk背景 */
-#operare_artitalk .at_button, #artitalk_main .at_button {
-    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0px 0px
-  }
-
-#article-container {
-    margin-bottom: 50px;
   }
