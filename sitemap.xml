@@ -38,6 +38,33 @@
   </url>
   
   <url>
+    <loc>https://www.emiliabear.com/about</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/changelog</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/categories/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.emiliabear.com/drafts/43</loc>
     
     <lastmod>2022-05-17</lastmod>
@@ -110,42 +137,6 @@
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/fb01/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/about</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/changelog</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/categories/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.emiliabear.com/blogs/44/</loc>
     
     <lastmod>2022-05-17</lastmod>
@@ -174,33 +165,6 @@
   
   <url>
     <loc>https://www.emiliabear.com/blogs/marxism01/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/blogs/31/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/blogs/30/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/blogs/22/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -263,25 +227,16 @@
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/25/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.emiliabear.com/blogs/24/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.emiliabear.com/blogs/41/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/fb01/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -299,7 +254,25 @@
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/blogs/1/</loc>
+    <loc>https://www.emiliabear.com/blogs/31/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/30/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/22/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -335,6 +308,24 @@
   </url>
   
   <url>
+    <loc>https://www.emiliabear.com/blogs/25/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/24/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.emiliabear.com/blogs/7/</loc>
     
     <lastmod>2022-05-17</lastmod>
@@ -354,6 +345,15 @@
   
   <url>
     <loc>https://www.emiliabear.com/blogs/2/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/blogs/1/</loc>
     
     <lastmod>2022-05-17</lastmod>
     

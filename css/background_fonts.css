@@ -3,7 +3,7 @@
 @import url('https://fonts.loli.net/css2?family=ABeeZee:ital@0;1&family=Emilys+Candy&family=Noto+Sans+SC:wght@500;700;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap%27');
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Serif SC', Lato, Roboto, 'Microsoft YaHei', 'PingFang SC', serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 #page-header #site-title {
     font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', Lato, Roboto, 'Microsoft YaHei', 'PingFang SC', sans-serif;
@@ -11,7 +11,7 @@ body {
 #article-container p, #article-container li {
     font-size: 18px;
     line-height: 1.8;
-    font-weight: 500;}
+    font-weight: 600;}
 #post-info {
     font-family: -apple-system, BlinkMacSystemFont, 'ABeeZee', 'Noto Sans SC', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
     font-weight: bold !important;}
