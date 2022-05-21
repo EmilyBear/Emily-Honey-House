@@ -55,11 +55,11 @@
 /*首页摘要显示优化*/
 #recent-posts > .recent-post-item >.recent-post-info > .content { -webkit-line-clamp: 3; }
 /*底部按钮*/
-#rightside > div > button, #rightside > div > a {
-    margin-bottom: 4px;
-    border-radius: 12px;
-}
-button {
-    border-radius: 12px;
-}
+#rightside > div > button, #rightside > div > a { margin-bottom: 4px; border-radius: 12px; }
+button { border-radius: 12px; }
 table th, table td { border: 1px solid #c9c9c9;}
+
+/*评论区*/
+.wl-user img, .wl-like { display:none !important; }
+.wl-cards .wl-user {margin-right: 0.25em !important; }
+.wl-cards .wl-user .verified-icon { position: static !important; }
