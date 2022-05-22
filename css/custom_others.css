@@ -1,3 +1,6 @@
+.layout { max-width: 1300px !important; }
+#aside-content { width: 22%; }
+
 /* 图标样式 */
 @font-face {
   font-family: "iconfont"; /* Project id 2554028 */
