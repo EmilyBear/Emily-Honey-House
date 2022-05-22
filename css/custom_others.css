@@ -1,5 +1,6 @@
+/*加宽显示*/
 .layout { max-width: 1300px !important; }
-#aside-content { width: 22%; }
+#aside-content { width: 24%; }
 
 /* 图标样式 */
 @font-face {
@@ -43,7 +44,7 @@
     top: 0;
 }
 
-/*文章首行缩进2字符*/
+/*文章首行缩进2字符和文章末间隔*/
 #article-container p{ text-indent: 2em; }
 #article-container detail p{ text-indent: 0em !important; }
 #article-container blockquote p{ text-indent: 0em !important; }
@@ -55,6 +56,8 @@
 #article-container ol p, #article-container ul p{ text-indent: 0em !important; }
 #article-container .timeline .timeline-item.headline .timeline-item-title .item-circle>p { text-indent: 0em; font-weight: 700; font-size: 1.2em; }
 #article-container .timeline .timeline-item .item-circle > p { font-weight: 600; text-indent: 0em; font-size: 0.8rem; }
+.tag_share { margin-top: 40px; }
+#post .tag_share .post-meta__tags { margin: 10px 10px 10px 0; }
 /*首页摘要显示优化*/
 #recent-posts > .recent-post-item >.recent-post-info > .content { -webkit-line-clamp: 3; }
 /*底部按钮*/
