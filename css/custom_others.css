@@ -1,6 +1,7 @@
 /*加宽显示*/
 .layout { max-width: 1300px !important; }
 #aside-content { width: 24%; }
+@media screen and (max-width: 900px) {  #aside-content {  width: 100%;  }}
 
 /* 图标样式 */
 @font-face {
