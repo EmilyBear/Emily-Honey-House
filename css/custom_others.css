@@ -65,6 +65,7 @@
 #rightside > div > button, #rightside > div > a { margin-bottom: 4px; border-radius: 12px; }
 button { border-radius: 12px; }
 table th, table td { border: 1px solid #c9c9c9;}
+.fa-brands, .fab { text-indent: 0em !important; }
 
 /*评论区*/
 .wl-user img, .wl-like { display:none !important; }
