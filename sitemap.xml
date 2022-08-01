@@ -4,7 +4,7 @@
   <url>
     <loc>https://www.emiliabear.com/manifest.json</loc>
     
-    <lastmod>2022-06-18</lastmod>
+    <lastmod>2022-08-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://www.emiliabear.com/messageboard/</loc>
     
-    <lastmod>2022-06-18</lastmod>
+    <lastmod>2022-08-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>https://www.emiliabear.com/gamedb/</loc>
     
-    <lastmod>2022-06-18</lastmod>
+    <lastmod>2022-08-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>https://www.emiliabear.com/changelog/</loc>
     
-    <lastmod>2022-06-18</lastmod>
+    <lastmod>2022-08-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>https://www.emiliabear.com/drafts/43</loc>
     
-    <lastmod>2022-06-18</lastmod>
+    <lastmod>2022-08-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,7 @@
   <url>
     <loc>https://www.emiliabear.com/blogs/fb23/</loc>
     
-    <lastmod>2022-06-17</lastmod>
+    <lastmod>2022-06-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -616,7 +616,7 @@
 
   <url>
     <loc>https://www.emiliabear.com/</loc>
-    <lastmod>2022-06-18</lastmod>
+    <lastmod>2022-08-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
