@@ -1,15 +1,15 @@
 User-agent: *
 Allow: /
 Allow: /archives/
-Allow: /categories/
+Disallow: /categories/
 Allow: /gamedb/
 Allow: /galleries/
 Allow: /resources/
 Disallow: /tags/ 
 Disallow: /drafts/
 Disallow: /vendors/
-Disallow: /js/
-Disallow: /css/
+Allow: /js/
+Allow: /css/
 Disallow: /fonts/
 Disallow: /fancybox/
 

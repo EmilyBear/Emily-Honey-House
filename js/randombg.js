@@ -1,3 +1,4 @@
+// 随机背景
 document.getElementById(web_bg).style.backgroundImage = backimg[bgindex];
 var bannerimg =[
   url(imgbg1.JPG),
