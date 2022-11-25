@@ -1,17 +1,20 @@
 User-agent: *
 Allow: /
 Allow: /archives/
+Allow: /posts/
+Allow: /blogs/
 Disallow: /categories/
-Allow: /gamedb/
 Allow: /galleries/
 Allow: /resources/
 Disallow: /tags/ 
 Disallow: /drafts/
+Disallow: /messageboard/
 Disallow: /vendors/
 Allow: /js/
 Allow: /css/
 Disallow: /fonts/
 Disallow: /fancybox/
+Disallow: /search.xml
 
 Sitemap: https://www.emiliabear.com/sitemap.xml
 Sitemap: https://www.emiliabear.com/baidusitemap.xml
