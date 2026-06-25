@@ -4,7 +4,7 @@
   <url>
     <loc>https://www.emiliabear.com/manifest.json</loc>
     
-    <lastmod>2025-08-19</lastmod>
+    <lastmod>2026-06-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +12,42 @@
   
   <url>
     <loc>https://www.emiliabear.com/messageboard/</loc>
+    
+    <lastmod>2026-06-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/notes/66/</loc>
+    
+    <lastmod>2026-06-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/notes/63/</loc>
+    
+    <lastmod>2026-04-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/notes/65/</loc>
+    
+    <lastmod>2026-01-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/notes/41/</loc>
     
     <lastmod>2025-08-19</lastmod>
     
@@ -371,15 +407,6 @@
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/galleries/guilin/</loc>
-    
-    <lastmod>2021-06-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.emiliabear.com/galleries/vgames/</loc>
     
     <lastmod>2021-06-01</lastmod>
@@ -390,6 +417,15 @@
   
   <url>
     <loc>https://www.emiliabear.com/galleries/yunguifootball/</loc>
+    
+    <lastmod>2021-06-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.emiliabear.com/galleries/guilin/</loc>
     
     <lastmod>2021-06-01</lastmod>
     
@@ -533,15 +569,6 @@
   </url>
   
   <url>
-    <loc>https://www.emiliabear.com/notes/41/</loc>
-    
-    <lastmod>2020-05-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.emiliabear.com/notes/17-2/</loc>
     
     <lastmod>2019-12-27</lastmod>
@@ -652,7 +679,7 @@
 
   <url>
     <loc>https://www.emiliabear.com/</loc>
-    <lastmod>2025-08-19</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
